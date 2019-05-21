@@ -1,0 +1,565 @@
+2019-05-21 14:11:58 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: scrapy_app)
+2019-05-21 14:11:58 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 18.9.0, Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.6.1, Platform Windows-10-10.0.17134-SP0
+2019-05-21 14:11:58 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'scrapy_app', 'LOG_FILE': 'logs\\default\\postings\\e5a5ed3e7bf311e9b52cb8aeedf74b81.log', 'NEWSPIDER_MODULE': 'scrapy_app.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['scrapy_app.spiders']}
+2019-05-21 14:11:58 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-05-21 14:11:58 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-05-21 14:11:58 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-05-21 14:11:58 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_app.pipelines.ScrapyAppPipeline']
+2019-05-21 14:11:58 [scrapy.core.engine] INFO: Spider opened
+2019-05-21 14:11:58 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-05-21 14:11:58 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2019-05-21 14:11:58 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://quotes.toscrape.com/robots.txt> (referer: None)
+2019-05-21 14:11:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://quotes.toscrape.com/> (referer: None)
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.206122) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+Albert Einstein
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.238100) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+J.K. Rowling
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.242099) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+Albert Einstein
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.250096) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+Jane Austen
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.258095) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+Marilyn Monroe
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.262094) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+Albert Einstein
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.270092) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+André Gide
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.278090) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+Thomas A. Edison
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.282089) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+Eleanor Roosevelt
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.290088) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+Steve Martin
+2019-05-21 14:11:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://quotes.toscrape.com/page/2/> (referer: http://quotes.toscrape.com/)
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.529718) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/2/>
+Marilyn Monroe
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.537702) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/2/>
+J.K. Rowling
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.545700) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/2/>
+Albert Einstein
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.553697) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/2/>
+Bob Marley
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.557403) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/2/>
+Dr. Seuss
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.565403) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/2/>
+Douglas Adams
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.574645) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/2/>
+Elie Wiesel
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.580978) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/2/>
+Friedrich Nietzsche
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.588007) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/2/>
+Mark Twain
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.591238) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/2/>
+Allen Saunders
+2019-05-21 14:11:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://quotes.toscrape.com/page/3/> (referer: http://quotes.toscrape.com/page/2/)
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.821621) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/3/>
+Pablo Neruda
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.829619) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/3/>
+Ralph Waldo Emerson
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.837633) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/3/>
+Mother Teresa
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.841627) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/3/>
+Garrison Keillor
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.849615) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/3/>
+Jim Henson
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.857614) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/3/>
+Dr. Seuss
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.865611) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/3/>
+Albert Einstein
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.873608) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/3/>
+J.K. Rowling
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.881607) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/3/>
+Albert Einstein
+2019-05-21 14:11:59 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:11:59.885606) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:11:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/3/>
+Bob Marley
+2019-05-21 14:12:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://quotes.toscrape.com/page/4/> (referer: http://quotes.toscrape.com/page/3/)
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.121005) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/4/>
+Dr. Seuss
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.128988) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/4/>
+J.K. Rowling
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.137028) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/4/>
+Bob Marley
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.141013) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/4/>
+Mother Teresa
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.149011) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/4/>
+J.K. Rowling
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.157018) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/4/>
+Charles M. Schulz
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.161008) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/4/>
+William Nicholson
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.169300) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/4/>
+Albert Einstein
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.176281) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/4/>
+Jorge Luis Borges
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.182278) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/4/>
+George Eliot
+2019-05-21 14:12:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://quotes.toscrape.com/page/5/> (referer: http://quotes.toscrape.com/page/4/)
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.417224) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/5/>
+George R.R. Martin
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.425207) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/5/>
+C.S. Lewis
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.433205) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/5/>
+Marilyn Monroe
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.441214) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/5/>
+Marilyn Monroe
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.449201) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/5/>
+Albert Einstein
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.453216) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/5/>
+Marilyn Monroe
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.461198) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/5/>
+Marilyn Monroe
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.465197) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/5/>
+Martin Luther King Jr.
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.473196) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/5/>
+J.K. Rowling
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.481193) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/5/>
+James Baldwin
+2019-05-21 14:12:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://quotes.toscrape.com/page/6/> (referer: http://quotes.toscrape.com/page/5/)
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.710731) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/6/>
+Jane Austen
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.722715) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/6/>
+Eleanor Roosevelt
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.730727) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/6/>
+Marilyn Monroe
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.742709) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/6/>
+Albert Einstein
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.750708) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/6/>
+Haruki Murakami
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.758706) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/6/>
+Alexandre Dumas fils
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.766844) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/6/>
+Stephenie Meyer
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.773840) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/6/>
+Ernest Hemingway
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.779836) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/6/>
+Helen Keller
+2019-05-21 14:12:00 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:00.785833) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/6/>
+George Bernard Shaw
+2019-05-21 14:12:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://quotes.toscrape.com/page/7/> (referer: http://quotes.toscrape.com/page/6/)
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.021591) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/7/>
+Charles Bukowski
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.029604) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/7/>
+Suzanne Collins
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.037589) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/7/>
+Suzanne Collins
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.041587) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/7/>
+C.S. Lewis
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.049585) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/7/>
+J.R.R. Tolkien
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.057582) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/7/>
+J.K. Rowling
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.061582) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/7/>
+Ernest Hemingway
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.070732) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/7/>
+Ralph Waldo Emerson
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.077728) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/7/>
+Mark Twain
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.084739) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/7/>
+Dr. Seuss
+2019-05-21 14:12:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://quotes.toscrape.com/page/8/> (referer: http://quotes.toscrape.com/page/7/)
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.329998) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/8/>
+Alfred Tennyson
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.338001) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/8/>
+Charles Bukowski
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.345986) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/8/>
+Terry Pratchett
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.353998) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/8/>
+Dr. Seuss
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.357997) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/8/>
+J.D. Salinger
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.367174) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/8/>
+George Carlin
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.373171) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/8/>
+John Lennon
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.381175) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/8/>
+W.C. Fields
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.388172) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/8/>
+Ayn Rand
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.392283) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/8/>
+Mark Twain
+2019-05-21 14:12:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://quotes.toscrape.com/page/9/> (referer: http://quotes.toscrape.com/page/8/)
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.630507) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/9/>
+Albert Einstein
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.638510) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/9/>
+Jane Austen
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.646508) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/9/>
+J.K. Rowling
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.654493) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/9/>
+Jane Austen
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.662504) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/9/>
+Jane Austen
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.668649) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/9/>
+C.S. Lewis
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.675648) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/9/>
+C.S. Lewis
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.681641) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/9/>
+Mark Twain
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.687638) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/9/>
+Mark Twain
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.693634) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/9/>
+C.S. Lewis
+2019-05-21 14:12:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://quotes.toscrape.com/page/10/> (referer: http://quotes.toscrape.com/page/9/)
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.930906) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/10/>
+J.K. Rowling
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.938896) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/10/>
+Jimi Hendrix
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.942908) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/10/>
+J.M. Barrie
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.950906) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/10/>
+E.E. Cummings
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.958900) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/10/>
+Khaled Hosseini
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.962889) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/10/>
+Harper Lee
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.972007) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/10/>
+Madeleine L'Engle
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.979003) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/10/>
+Mark Twain
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.985000) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/10/>
+Dr. Seuss
+2019-05-21 14:12:01 [py.warnings] WARNING: c:\users\pat\appdata\local\programs\python\python37-32\lib\site-packages\django\db\models\fields\__init__.py:1423: RuntimeWarning: DateTimeField Posting.created_date received a naive datetime (2019-05-21 14:12:01.991995) while time zone support is active.
+  RuntimeWarning)
+
+2019-05-21 14:12:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/page/10/>
+George R.R. Martin
+2019-05-21 14:12:01 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-05-21 14:12:02 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 2870,
+ 'downloader/request_count': 11,
+ 'downloader/request_method_count/GET': 11,
+ 'downloader/response_bytes': 24812,
+ 'downloader/response_count': 11,
+ 'downloader/response_status_count/200': 10,
+ 'downloader/response_status_count/404': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 5, 21, 18, 12, 1, 999001),
+ 'item_scraped_count': 100,
+ 'log_count/DEBUG': 112,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 100,
+ 'request_depth_max': 9,
+ 'response_received_count': 11,
+ 'scheduler/dequeued': 10,
+ 'scheduler/dequeued/memory': 10,
+ 'scheduler/enqueued': 10,
+ 'scheduler/enqueued/memory': 10,
+ 'start_time': datetime.datetime(2019, 5, 21, 18, 11, 58, 622864)}
+2019-05-21 14:12:02 [scrapy.core.engine] INFO: Spider closed (finished)

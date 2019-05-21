@@ -1,12 +1,15 @@
-from django.shortcuts import render
-
 from rest_framework.response import Response
-from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework import generics
+from rest_framework.pagination import PageNumberPagination
+from .serializers import JobSerializer
+from .models import Posting
 
+class ListJobsPagination(PageNumberPagination):
+    page_size = 20
 
-# This will return a list of books
-@api_view(["GET"])
-def book(request):
-    books = ["Pro Python", "Fluent Python", "Speaking javascript", "The Go programming language"]
-    return Response(status=status.HTTP_200_OK, data={"data": books})
+class ListJobs(generics.ListAPIView):
+    pagination_class = ListJobsPagination
+    serializer_class = JobSerializer
+    def get_queryset(self):
+        jobs = Posting.objects.all()
+        return jobs
