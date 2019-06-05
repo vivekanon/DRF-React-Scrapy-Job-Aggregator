@@ -1,0 +1,42 @@
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+}
+.botton-hover-y {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.botton-hover-y:focus,
+.botton-hover-y:hover {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+.botton-hover-scale {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.botton-hover-scale:focus,
+.botton-hover-scale:hover {
+  -webkit-transform: scale(1.009);
+  transform: scale(1.009);
+}
+.botton-hover-color {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.shadow-outline {
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5) !important;
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}
+
+.focus\:shadow-outline:focus {
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5) !important;
+}

@@ -27,6 +27,6 @@ class Posting(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     created_date = models.DateTimeField(default=datetime.now)
-    favorite = models.ManyToManyField(User, related_name='favorited_post')
+    favorite = models.ManyToManyField(User, related_name='favorite', blank=True)
     def __str__(self):
         return(self.title)
