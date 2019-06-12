@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-
+import { ContextProvider } from '../../store/state'
 import Header from "./header";
 import Footer from "./footer";
 
@@ -16,14 +16,16 @@ function Layout({ children }) {
             }
           }
         }
-      `}
+      `}l
       render={data => (
         <div className="flex flex-col min-h-screen w-full">
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <div className="flex flex-wrap bg-grey-lighter w-full mx-auto ">
-            {children}
-          </div>
-          <Footer />
+          <ContextProvider>
+            <Header siteTitle={data.site.siteMetadata.title} />
+              <div className="flex flex-wrap bg-grey-lighter w-full mx-auto ">
+                {children}
+              </div>
+            <Footer />
+          </ContextProvider>
         </div>
       )}
     />

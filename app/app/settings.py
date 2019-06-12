@@ -64,7 +64,9 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
-    '127.0.0.1:9000'
+    'localhost:4000',
+    '127.0.0.1:9000',
+    '127.0.0.1:4000',
 )
 
 ROOT_URLCONF = 'app.urls'
