@@ -40,9 +40,6 @@ export function IndexForm() {
             </button>
           </div>
         </div>
-        <>
-        {console.log({data})}
-        </>
       </div>
       <IndexSort />
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 
-import Layout from "../components/reuseable/layout";
-import SEO from "../components/reuseable/seo";
+import Layout from "../components/misc/layout";
+import SEO from "../components/misc/seo";
 import abductionIllustration from "../images/abduction-illustration.svg";
 
 function NotFoundPage() {

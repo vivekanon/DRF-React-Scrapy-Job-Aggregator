@@ -4,9 +4,9 @@ import React from "react";
 import HeaderLeft from "./headerComponents/headerLeft";
 import HeaderCenter from "./headerComponents/headerCenter";
 import HeaderRight from "./headerComponents/headerRight";
-import "./reuseable.css";
+import "../misc/reuseable.css";
 
-function Header({ siteTitle }) {
+function HeaderWrapper({ siteTitle }) {
   return (
     <nav className="bg-white relative flex justify-around h-16 items-center z-50 montserrat">
       <HeaderLeft />
@@ -16,12 +16,12 @@ function Header({ siteTitle }) {
   );
 }
 
-Header.propTypes = {
+HeaderWrapper.propTypes = {
   siteTitle: PropTypes.string
 };
 
-Header.defaultProps = {
+HeaderWrapper.defaultProps = {
   siteTitle: ``
 };
 
-export default Header;
+export default HeaderWrapper;

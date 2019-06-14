@@ -1,7 +1,7 @@
 import React from "react";
 
-import Layout from "../components/reuseable/layout";
-import SEO from "../components/reuseable/seo";
+import Layout from "../components/misc/layout";
+import SEO from "../components/misc/seo";
 import IndexTop from "../components/index/indexTop";
 import { IndexResults } from "../components/index/indexResults";
 import { IndexForm } from "../components/index/indexForm";

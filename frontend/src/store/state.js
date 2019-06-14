@@ -1,5 +1,6 @@
 import React from 'react'
 import {LoginProvider} from './login'
+import { FetchProvider } from './fetch'
 
 function ProviderComposer({ contexts, children }) {
     return contexts.reduceRight(
@@ -14,7 +15,7 @@ function ProviderComposer({ contexts, children }) {
   function ContextProvider({ children }) {
     return (
       <ProviderComposer
-        contexts={[<LoginProvider />]}
+        contexts={[<LoginProvider />, <FetchProvider />]}
       >
         {children}
       </ProviderComposer>
