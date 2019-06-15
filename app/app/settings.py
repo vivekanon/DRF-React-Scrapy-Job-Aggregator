@@ -67,6 +67,7 @@ CORS_ORIGIN_WHITELIST = (
     'localhost:4000',
     '127.0.0.1:9000',
     '127.0.0.1:4000',
+    'localhost:8001'
 )
 
 ROOT_URLCONF = 'app.urls'
@@ -119,7 +120,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
 
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True   
+ACCOUNT_USERNAME_REQUIRED = False
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 

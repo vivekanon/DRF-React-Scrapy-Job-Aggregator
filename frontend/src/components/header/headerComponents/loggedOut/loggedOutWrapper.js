@@ -39,7 +39,7 @@ export default function LoggedOutWrapper() {
 
     return (
       <div className="relative">
-        <button className="lg:px-6 lg:py-3 px-4 font-semibold text-blue-top text-xs"
+        <button className="lg:px-6 lg:py-3 py-2 px-3 font-semibold text-blue-top text-xs"
         ref={loginRef}
         onClick={toggleLogin}>
           Login

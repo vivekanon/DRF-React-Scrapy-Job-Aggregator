@@ -3,6 +3,7 @@ from . import models
 
 class JobSerializer(serializers.ModelSerializer):
     class Meta:
+        ordering = ['-id']
         model = models.Posting
         fields = (
             'id',
