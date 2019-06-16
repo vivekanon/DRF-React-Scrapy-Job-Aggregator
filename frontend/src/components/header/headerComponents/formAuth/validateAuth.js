@@ -14,6 +14,7 @@ export default function validateAuth(values) {
         } else if(values.password.length < 6) {
             errors.password = 'Password must be > 6 characters'
         }
+
         return errors;
 
 }

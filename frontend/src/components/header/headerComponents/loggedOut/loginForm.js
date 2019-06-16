@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import useFormValidation from '../useFormValidation'
-import validateAuth from '../validateAuth'
+import React, { useState, useContext } from 'react';
+import useFormValidation from '../formAuth/useFormValidation'
+import validateAuth from '../formAuth/validateAuth'
+import {LoginContext} from '../../../../store/login'
 import axios from 'axios'
 
 const INITIAL_STATE = {
@@ -9,16 +10,24 @@ const INITIAL_STATE = {
 }
 
 export default function LoginForm() {
+    const { setLoginOpen, setIsLoggedIn } = useContext(LoginContext)
     const { handleChange, handleSubmit, values, handleBlur, errors, isSubmitting } = useFormValidation(INITIAL_STATE, validateAuth, authenticateUser);
     const [authError, setAuthError] = useState(null)
-
+    const [key, setKey] = useState({});
     async function authenticateUser() {
         const { email, password } = values
             await axios.post('http://127.0.0.1:8000/rest-auth/login/', {
                 email: email,
                 password: password
             }).then(res=> {
-                console.log(res.data)
+                const token = res.data.key;
+                const expirationDate = new Date(new Date().getTime() + 3600 * 1000);
+                setKey({
+                    key: token,
+                    expiration: expirationDate
+                })
+                setLoginOpen(false)
+                setIsLoggedIn(true)
             }).catch(error=> {
                 console.log('auth error', error)
                 setAuthError(error.toString())
@@ -32,10 +41,11 @@ export default function LoginForm() {
         <p className="text-blue-top font-semibold text-xs">
         Login
         </p>
+   
         <form className="flex flex-col justify-around rounded flex-1 mt-2 mb-2 " 
         onSubmit={handleSubmit}>
         <input
-            className={errors.email && 'border-red border bg-white border-2 rounded text-base appearance-none w-full py-2 px-2 text-blue-top focus:outline-none focus:shadow-outline' || 'bg-white border-2 rounded text-base appearance-none w-full py-2 px-2 text-blue-top focus:outline-none focus:shadow-outline'}
+            className={errors.email && 'border-red bg-white border-2 rounded text-base appearance-none w-full py-2 px-2 text-blue-top focus:outline-none botton-hover-color' || 'focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-2 px-2 text-blue-top botton-hover-color focus:border-green-light'}
             type="text"
             placeholder="Email@email.com"
             name="email"
@@ -45,7 +55,7 @@ export default function LoginForm() {
         />
         {errors.email && <p className="text-xs text-red ">{errors.email}</p>}
         <input
-            className={errors.password && 'border-red border bg-white border-2 rounded text-base appearance-none w-full py-2 px-2 text-blue-top focus:outline-none focus:shadow-outline' || 'bg-white border-2 rounded text-base appearance-none w-full py-2 px-2 text-blue-top focus:outline-none focus:shadow-outline'}
+            className={errors.password && 'border-red bg-white border-2 rounded text-base appearance-none w-full py-2 px-2 text-blue-top focus:outline-none botton-hover-color' || 'focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-2 px-2 text-blue-top botton-hover-color focus:border-green-light'}
             type="password"
             name="password"
             placeholder="Password"
@@ -64,6 +74,7 @@ export default function LoginForm() {
             </button>
         </div>
         </form>
+
     </div>
     )
 }

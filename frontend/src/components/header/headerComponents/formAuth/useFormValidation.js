@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function formValidation(initialState, validate, authenticate) {
     const [values, setValues] = useState(initialState)
@@ -10,7 +10,6 @@ export default function formValidation(initialState, validate, authenticate) {
             const noErrors = Object.keys(errors).length === 0
             if(noErrors) {
                 authenticate()
-                console.log('authenticated', values.email, values.password);
                 setSubmitting(false)
             } else {
                 setSubmitting(false)

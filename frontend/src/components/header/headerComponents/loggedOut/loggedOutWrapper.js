@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useContext } from 'react'
+import {LoginContext} from '../../../../store/login'
 import RegisterModal from './registerModal'
 import LoginModal from './loginModal'
 
@@ -21,11 +22,12 @@ export default function LoggedOutWrapper() {
     loginPosition: null,
     registPosition: null
   });
-  const [isLoginOpen, setLoginOpen] = useState(false);
+  const { isLoginOpen, setLoginOpen } = useContext(LoginContext)
   const [isRegisterOpen, setRegisterOpen] = useState(false);
-  
+
   useEffect(
     () => {
+    
     function getPosition() {
       const loginPosition = loginRef.current.getBoundingClientRect()
       const registerPosition = registerRef.current.getBoundingClientRect()
@@ -34,10 +36,14 @@ export default function LoggedOutWrapper() {
         registerPosition: registerPosition
       })
     }
+   
+    
     getPosition();
+    
   }, []);
 
     return (
+      
       <div className="relative">
         <button className="lg:px-6 lg:py-3 py-2 px-3 font-semibold text-blue-top text-xs"
         ref={loginRef}
@@ -69,6 +75,7 @@ export default function LoggedOutWrapper() {
             :
             null
         }
+
       </div>
     )
 }

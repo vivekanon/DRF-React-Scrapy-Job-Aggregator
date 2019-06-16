@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-
+import React, { useContext } from 'react'
+import {LoginContext} from '../../../../store/login'
 
 export default function LoggedInWrapper() {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    
+  const { setIsLoggedIn} = useContext(LoginContext)
     return (
         <>
         <button className="lg:px-6 lg:py-3 px-4 font-semibold text-blue-top text-xs "
