@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import useFormValidation from '../formAuth/useFormValidation'
 import validateAuth from '../formAuth/validateAuth'
-import {LoginContext} from '../../../../store/login'
+import { LoginContext } from '../../../../store/login'
 import axios from 'axios'
 
 const INITIAL_STATE = {
@@ -10,7 +10,7 @@ const INITIAL_STATE = {
 }
 
 export default function LoginForm() {
-    const { setLoginOpen, setIsLoggedIn } = useContext(LoginContext)
+    const { setLoginOpen, setIsLoggedIn, isLoggedIn } = useContext(LoginContext)
     const { handleChange, handleSubmit, values, handleBlur, errors, isSubmitting } = useFormValidation(INITIAL_STATE, validateAuth, authenticateUser);
     const [authError, setAuthError] = useState(null)
     const [key, setKey] = useState({});
@@ -34,6 +34,10 @@ export default function LoginForm() {
             })
 
     }
+    useEffect(()=> {
+        localStorage.setItem('isLoggedIn', isLoggedIn)
+    }, [isLoggedIn])
+
 
 
     return (
@@ -74,7 +78,7 @@ export default function LoginForm() {
             </button>
         </div>
         </form>
-
+        {console.log({isLoggedIn})}
     </div>
     )
 }
