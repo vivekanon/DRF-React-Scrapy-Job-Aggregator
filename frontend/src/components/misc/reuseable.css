@@ -6,3 +6,10 @@
 .PTSans {
   font-family: "PT Sans", sans-serif;
 }
+.modal-translate {
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  align-self: center;
+  align-content: center;
+}

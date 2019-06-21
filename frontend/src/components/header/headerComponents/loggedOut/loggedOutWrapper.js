@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useContext } from 'react'
 import {LoginContext} from '../../../../store/login'
-import RegisterModal from './registerModal'
-import LoginModal from './loginModal'
+import RegisterModal from '../loggedOut/modal/registerModal'
+import LoginModal from '../loggedOut/modal/loginModal'
 
 export default function LoggedOutWrapper() {
   function clearAll() {
@@ -22,8 +22,7 @@ export default function LoggedOutWrapper() {
     loginPosition: null,
     registPosition: null
   });
-  const { isLoginOpen, setLoginOpen } = useContext(LoginContext)
-  const [isRegisterOpen, setRegisterOpen] = useState(false);
+  const { isLoginOpen, setLoginOpen, isRegisterOpen, setRegisterOpen } = useContext(LoginContext)
 
   useEffect(
     () => {
