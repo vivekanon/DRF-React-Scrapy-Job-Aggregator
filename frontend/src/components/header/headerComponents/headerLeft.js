@@ -5,7 +5,11 @@ export default function HeaderLeft() {
   return (
     <div className="flex w-2/5 flex-shrink">
       <div className="relative w-full h-full flex justify-center items-center fill-current stroke-current text-blue-top">
+<<<<<<< HEAD
         <Link to="/">
+=======
+      <Link to="/">
+>>>>>>> 1aae87f8a3b794e7caba9457b8e2ce58f6488cf6
         <svg
           className="fill-current stroke-current text-blue-top lg:w-full w-4/5"
           width="152px"

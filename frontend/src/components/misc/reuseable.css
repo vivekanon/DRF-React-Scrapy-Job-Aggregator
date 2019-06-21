@@ -6,6 +6,7 @@
 .PTSans {
   font-family: "PT Sans", sans-serif;
 }
+<<<<<<< HEAD
 .modal-translate {
   justify-content: center;
   align-items: center;
@@ -13,3 +14,12 @@
   align-self: center;
   align-content: center;
 }
+=======
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+>>>>>>> 1aae87f8a3b794e7caba9457b8e2ce58f6488cf6
