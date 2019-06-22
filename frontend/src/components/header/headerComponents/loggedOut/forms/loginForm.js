@@ -1,8 +1,8 @@
 import React, { useState, useContext, useEffect } from "react";
+import axios from "axios";
 import useFormValidation from "../../formAuth/useFormValidation";
 import validateAuth from "../../formAuth/validateAuth";
 import { LoginContext } from "../../../../../store/login";
-import axios from "axios";
 
 const INITIAL_STATE = {
   email: "",
@@ -21,6 +21,7 @@ export default function LoginForm() {
   } = useFormValidation(INITIAL_STATE, validateAuth, authenticateUser);
   const [authError, setAuthError] = useState(null);
   const [key, setKey] = useState({});
+
   async function authenticateUser() {
     const { email, password } = values;
     await axios
@@ -48,9 +49,9 @@ export default function LoginForm() {
   }, [isLoggedIn]);
 
   return (
-    <div className="flex flex-col h-full lg:w-1/2 w-full">
+    <div className="flex flex-col lg:w-1/2 w-full justify-between h-full">
       <form
-        className="flex flex-col lg:w-3/4 w-full justify-around rounded flex-1 mt-2 mb-2"
+        className="flex flex-col justify-around rounded flex-1 mt-2 mb-2"
         onSubmit={handleSubmit}
       >
         <input
@@ -94,6 +95,7 @@ export default function LoginForm() {
           </button>
           <button
             onClick={() => setLoginOpen(false)}
+            type="reset"
             className="w-1/2 px-8 py-4 text-sm bg-white text-black font-semibold border rounded m-1 botton-hover-color hover:bg-smoke-lightest"
           >
             Cancel
