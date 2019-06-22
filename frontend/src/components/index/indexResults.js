@@ -1,19 +1,24 @@
 import React, { useContext } from "react";
+import Loader from "../misc/loader";
 import { FetchContext } from "../../store/fetch";
 
 export function IndexResults() {
   const { jobs } = useContext(FetchContext);
+
   return (
     <div className="relative bg-white flex flex-col w-full justify-start lg:mx-auto montserrat">
       <div className="flex flex-col lg:w-3/4 w-5/6 items-start justify-center mx-auto">
         <p className="lg:pl-2 pt-6 pb-6 font-semibold">Latest Jobs</p>
         <div className="w-full flex justify-around flex-wrap mx-auto">
-          <JobRow />
-          <JobRow />
-          <JobRow />
-          <JobRow />
+          {console.log(jobs)}
+          {jobs.jobs ? (
+            jobs.jobs.map((job, id) => (
+              <JobRow key={id} title={job.title} date={job.created_date} />
+            ))
+          ) : (
+            <Loader />
+          )}
         </div>
-        {console.log(jobs.jobs)}
       </div>
     </div>
   );
@@ -32,7 +37,7 @@ export function JobRow(props) {
 
       <div className="lg:w-1/2 flex flex-wrap items-center">
         <div className="w-full">
-          <p className="font-semibold">Senior FrontEnd Engineer</p>
+          <p className="font-semibold">{props.title}</p>
         </div>
         <div className="w-full">
           <p className="text-xs">Company Name</p>
@@ -41,7 +46,7 @@ export function JobRow(props) {
           <p className="text-xs font-semibold">City, state</p>
         </div>
         <div className="w-1/2">
-          <p className="text-xs font-semibold">12 Minutes Ago</p>
+          <p className="text-xs font-semibold">{props.date}</p>
         </div>
         <div className="lg:w-2/5 w-1/2 flex justify-between items-center mt-2">
           <p className="text-xs font-semibold">Source:</p>
