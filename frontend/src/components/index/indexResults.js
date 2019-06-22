@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import {LoginContext} from '../../store/login'
+import { FetchContext } from "../../store/fetch";
 
 export function IndexResults() {
+  const { jobs } = useContext(FetchContext);
   return (
     <div className="relative bg-white flex flex-col w-full justify-start lg:mx-auto montserrat">
       <div className="flex flex-col lg:w-3/4 w-5/6 items-start justify-center mx-auto">
@@ -11,15 +12,14 @@ export function IndexResults() {
           <JobRow />
           <JobRow />
           <JobRow />
-          <JobRow />
         </div>
+        {console.log(jobs.jobs)}
       </div>
     </div>
   );
 }
 
-export function JobRow() {
-  const { isLoggedIn } = useContext(LoginContext)
+export function JobRow(props) {
   return (
     <div className="flex lg:flex-no-wrap flex-wrap w-full border-2 rounded p-4 text-truncate mt-1 mb-1 botton-hover-scale hover:border-green-light hover:shadow">
       <div className="lg:w-1/6 w-1/2 flex items-center mb-2">
@@ -69,12 +69,6 @@ export function JobRow() {
       </div>
 
       <div className="lg:w-1/4 w-1/2 flex lg:justify-end justify-start items-end mt-2">
-        { isLoggedIn ? 
-        <button className="px-4 py-2 text-xs bg-green-light text-white border rounded m-1">
-           Favorite
-        </button>
-         : null
-        }
         <button className="px-4 py-2 text-xs bg-green-light text-white border rounded m-1">
           Apply
         </button>

@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from api.views import ListJob, DetailJob, FavoriteJob, FavoriteList
+from api.views import ListJob, DetailJob, FavoriteJob, FavoriteList, SearchList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("jobs/", ListJob.as_view(), name="jobs"),
+    path("jobs/", ListJob, name="jobs"),
     path("jobs/<int:pk>", DetailJob.as_view(), name="job detail"),
+    path("", SearchList.as_view(), name="search"),
     path("favorite/<id>", FavoriteJob, name="favorite"),
     path('favorite/', FavoriteList, name="favorite jobs"),
     path('rest-auth/', include('rest_auth.urls')),

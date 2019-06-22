@@ -1,64 +1,88 @@
 import React, { useState, useContext, useEffect } from "react";
-import { FetchContext } from '../../store/fetch'
-import axios from 'axios';
+import { FetchContext } from "../../store/fetch";
+import axios from "axios";
+
+const initialState = {
+  search: "",
+  location: ""
+};
 
 export function IndexForm() {
   const [isFocused, setIsFocused] = useState(false);
-  const { isFetchingData, setFetchData, jobs, setJobs } = useContext(FetchContext)
+  const [values, setValue] = useState(initialState);
+  const { isFetchingData, setFetchData, jobs, setJobs } = useContext(
+    FetchContext
+  );
   const focus = () => setIsFocused(true);
   const focusOut = () => setIsFocused(false);
 
- 
+  function handleChange(e) {
+    setValue({
+      ...values,
+      [e.target.name]: e.target.value
+    });
+  }
+
   async function handleSubmit(e) {
+    const { search, location } = values;
     e.preventDefault();
     await axios
-    .get(`http://127.0.0.1:8000/jobs${searchData}`)
-    .then(response=> setJobs({jobs: response.data}))
-    .catch(error=> {
-      console.log(error)
-    })
+      .get(`http://127.0.0.1:8000/?search=${search}`)
+      .then(response => setJobs({ jobs: response.data }))
+      .catch(error => {
+        console.log(error);
+      });
   }
-  useEffect(()=> {
+  useEffect(() => {
     async function initialFetch() {
-     await axios
-      .get('http://127.0.0.1:8000/jobs/')
-      .then(response=> setJobs({jobs: response.data}))
-      .catch(error=> {
-        console.log(error)
-      })   
+      await axios
+        .get("http://127.0.0.1:8000/jobs/")
+        .then(response => setJobs({ jobs: response.data }))
+        .catch(error => {
+          console.log(error);
+        });
     }
-    initialFetch()
-  }, [])
+    initialFetch();
+  }, []);
+
   return (
     <>
       <div className="flex w-full bg-white montserrat lg:pl-2 lg:pr-2 pl-4 pr-4 lg:pt-12 pt-6 pb-6">
-        <div className="lg:w-3/4 w-full mx-auto flex rounded border-2 botton-hover-color" style={isFocused ? {borderColor: '#51d88a'} : {borderColor: '#dae1e7'}}>
-          <form 
-          className="h-full flex flex-no-wrap flex-1 p-4" 
-          onSubmit={handleSubmit}
+        <div
+          className="lg:w-3/4 w-full mx-auto flex rounded border-2 botton-hover-color"
+          style={
+            isFocused ? { borderColor: "#51d88a" } : { borderColor: "#dae1e7" }
+          }
+        >
+          <form
+            className="h-full flex flex-no-wrap flex-1 p-4"
+            onSubmit={handleSubmit}
           >
             <input
               className="h-full lg:text-lg bg-transparent text-base appearance-none lg:w-3/4 w-3/5 text-grey p-4 focus:outline-none"
               type="text"
               placeholder="Job Title"
+              name="search"
               onFocus={focus}
               onBlur={focusOut}
+              onChange={handleChange}
+              value={values.search || ""}
             />
             <input
               className=" h-full overflow-hidden lg:text-lg bg-transparent  text-base appearance-none lg:w-1/6 w-2/5 text-grey pt-4 pb-4 focus:outline-none "
               type="number"
               placeholder="12345"
+              name="location"
               onFocus={focus}
               onBlur={focusOut}
+              onChange={handleChange}
+              value={values.location || ""}
             />
-
 
             <button className="px-6 py-3 bg-green-light font-semibold text-white rounded shadow-md text-xs botton-hover-color hover:bg-green">
               Submit
             </button>
- 
           </form>
-          {console.log(jobs)}
         </div>
       </div>
       <IndexSort />

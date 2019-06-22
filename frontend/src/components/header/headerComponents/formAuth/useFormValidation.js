@@ -1,47 +1,46 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 
 export default function formValidation(initialState, validate, authenticate) {
-    const [values, setValues] = useState(initialState)
-    const [errors, setErrors] = useState({})
-    const [isSubmitting, setSubmitting] = useState(false)
+  const [values, setValues] = useState(initialState);
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setSubmitting] = useState(false);
 
-    useEffect(()=> {
-        if(isSubmitting) {
-            const noErrors = Object.keys(errors).length === 0
-            if(noErrors) {
-                authenticate()
-                setSubmitting(false)
-            } else {
-                setSubmitting(false)
-            }
-        }
-    }, [errors])
-
-    function handleChange(e) {
-        setValues({
-            ...values,
-            [e.target.name]: e.target.value
-        })
+  useEffect(() => {
+    if (isSubmitting) {
+      const noErrors = Object.keys(errors).length === 0;
+      if (noErrors) {
+        authenticate();
+        setSubmitting(false);
+      } else {
+        setSubmitting(false);
+      }
     }
-    function handleBlur() {
-        const validationErrors = validate(values)
-        setErrors(validationErrors)
-    }
+  }, [errors]);
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        const validationErrors = validate(values)
-        setErrors(validationErrors)
-        setSubmitting(true)
-    }
- 
+  function handleChange(e) {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value
+    });
+  }
+  function handleBlur() {
+    const validationErrors = validate(values);
+    setErrors(validationErrors);
+  }
 
-    return { 
-        handleChange, 
-        handleSubmit, 
-        values, 
-        handleBlur, 
-        errors, 
-        isSubmitting
-     }
+  function handleSubmit(e) {
+    e.preventDefault();
+    const validationErrors = validate(values);
+    setErrors(validationErrors);
+    setSubmitting(true);
+  }
+
+  return {
+    handleChange,
+    handleSubmit,
+    values,
+    handleBlur,
+    errors,
+    isSubmitting
+  };
 }

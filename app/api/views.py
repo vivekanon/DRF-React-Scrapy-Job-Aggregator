@@ -1,5 +1,6 @@
+from django.http import JsonResponse
 from rest_framework.response import Response
-from rest_framework import generics, status
+from rest_framework import generics, status, filters
 from rest_framework.pagination import PageNumberPagination
 from django.shortcuts import get_object_or_404
 from rest_framework.decorators import api_view
@@ -7,22 +8,28 @@ from .serializers import JobSerializer
 from .models import Posting
 
 # Pagination for job listings
+
+
 class ListJobPagination(PageNumberPagination):
     page_size = 20
-    
+
 # List view for job postings with job pagination limit of 20
-class ListJob(generics.ListAPIView):
-    pagination_class = ListJobPagination
-    serializer_class = JobSerializer
-    def get_queryset(self):
-        jobs = Posting.objects.all()
-        return jobs
+
+
+@api_view(['GET'])
+def ListJob(request):
+    jobs = Posting.objects.all()
+    serializer = JobSerializer(jobs, many=True)
+    return JsonResponse(serializer.data, safe=False)
 
 # detail view for job postings
+
+
 class DetailJob(generics.RetrieveAPIView):
     pagination_class = ListJobPagination
     serializer_class = JobSerializer
     lookup_fields = ('id')
+
     def get_queryset(self, **kwargs):
         jobs = Posting.objects.all()
         return jobs
@@ -47,4 +54,11 @@ def FavoriteList(request):
     user = request.user
     favorite_posts = user.favorite.all()
     serializer = JobSerializer(favorite_posts, many=True)
-    return Response({"Favorites": serializer.data}, status=status.HTTP_200_OK)     
+    return Response({"Favorites": serializer.data}, status=status.HTTP_200_OK)
+
+
+class SearchList(generics.ListAPIView):
+    queryset = Posting.objects.all()
+    serializer_class = JobSerializer
+    filter_backends = (filters.SearchFilter,)
+    search_fields = ('title', 'description')
