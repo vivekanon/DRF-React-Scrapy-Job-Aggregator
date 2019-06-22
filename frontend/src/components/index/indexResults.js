@@ -4,7 +4,6 @@ import { FetchContext } from "../../store/fetch";
 
 export function IndexResults() {
   const { jobs } = useContext(FetchContext);
-
   return (
     <div className="relative bg-white flex flex-col w-full justify-start lg:mx-auto montserrat">
       <div className="flex flex-col lg:w-3/4 w-5/6 items-start justify-center mx-auto">
@@ -19,6 +18,7 @@ export function IndexResults() {
             <Loader />
           )}
         </div>
+        {console.log(jobs.jobs)}
       </div>
     </div>
   );
