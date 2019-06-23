@@ -7,7 +7,7 @@ export default function LoggedInWrapper() {
   return (
     <>
       <button
-        className="lg:px-6 lg:py-3 px-4 font-semibold text-blue-top text-xs "
+        className="lg:px-6 lg:py-3 px-4 font-semibold text-blue-800 text-xs "
         onClick={() => {
           setIsLoggedIn(localStorage.removeItem("isLoggedIn"));
         }}
@@ -15,7 +15,7 @@ export default function LoggedInWrapper() {
         Logout
       </button>
       <button
-        className="lg:px-6 lg:py-3 py-2 px-3 bg-green-light font-semibold text-white rounded shadow-md text-xs botton-hover-color hover:bg-green"
+        className="lg:px-6 lg:py-3 py-2 px-3 bg-green-400 font-semibold text-white rounded shadow-md text-xs botton-hover-color hover:bg-green-600"
         onClick={() => navigate("/favorite")}
       >
         Profile

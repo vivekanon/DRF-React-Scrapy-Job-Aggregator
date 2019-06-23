@@ -1,8 +1,9 @@
 from django.http import JsonResponse
-from rest_framework.response import Response
-from rest_framework import generics, status, filters
-from rest_framework.pagination import PageNumberPagination
 from django.shortcuts import get_object_or_404
+from rest_framework import generics, status, filters
+from rest_framework.response import Response
+from rest_framework.exceptions import NotFound as NotFoundError
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.decorators import api_view
 from .serializers import JobSerializer
 from .models import Posting
@@ -11,16 +12,15 @@ from .models import Posting
 
 
 class ListJobPagination(PageNumberPagination):
-    page_size = 20
+    page_size = 20  # Number of objects to return in one page
 
 # List view for job postings with job pagination limit of 20
-
-
 @api_view(['GET'])
 def ListJob(request):
     jobs = Posting.objects.all()
     serializer = JobSerializer(jobs, many=True)
-    return JsonResponse(serializer.data, safe=False)
+    pagination_class = ListJobPagination
+    return Response(serializer.data)
 
 # detail view for job postings
 

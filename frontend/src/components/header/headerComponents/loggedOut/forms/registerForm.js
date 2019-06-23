@@ -52,8 +52,8 @@ export default function RegisterForm() {
         <input
           className={
             (errors.email &&
-              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-top focus:outline-none botton-hover-color") ||
-            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-top botton-hover-color focus:border-green-light"
+              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 focus:outline-none botton-hover-color") ||
+            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color focus:border-green-400"
           }
           type="text"
           placeholder="Email@email.com"
@@ -62,12 +62,14 @@ export default function RegisterForm() {
           onBlur={handleBlur}
           onChange={handleChange}
         />
-        {errors.email && <p className="text-xs text-red ">{errors.email}</p>}
+        {errors.email && (
+          <p className="text-xs text-red-500 ">{errors.email}</p>
+        )}
         <input
           className={
             (errors.password1 &&
-              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-top focus:outline-none botton-hover-color") ||
-            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-top botton-hover-color focus:border-green-light"
+              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 focus:outline-none botton-hover-color") ||
+            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color focus:border-green-400"
           }
           type="password"
           name="password1"
@@ -77,13 +79,13 @@ export default function RegisterForm() {
           onChange={handleChange}
         />
         {errors.password1 && (
-          <p className="text-xs text-red ">{errors.password1}</p>
+          <p className="text-xs text-red-500 ">{errors.password1}</p>
         )}
         <input
           className={
             (errors.password2 &&
-              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-top focus:outline-none botton-hover-color") ||
-            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-top botton-hover-color focus:border-green-light"
+              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 focus:outline-none botton-hover-color") ||
+            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color focus:border-green-400"
           }
           type="password"
           name="password2"
@@ -93,12 +95,12 @@ export default function RegisterForm() {
           onChange={handleChange}
         />
         {errors.password2 && (
-          <p className="text-xs text-red ">{errors.password2}</p>
+          <p className="text-xs text-red-500 ">{errors.password2}</p>
         )}
-        {authError && <p className="text-xs text-red">{authError}</p>}
+        {authError && <p className="text-xs text-red-500">{authError}</p>}
         <div className="flex">
           <button
-            className="w-1/2 px-8 py-4 text-sm bg-green-light text-white font-semibold border rounded m-1 botton-hover-color hover:bg-green-dark"
+            className="w-1/2 px-8 py-4 text-sm bg-green-400 text-white font-semibold border rounded mr-2 botton-hover-color hover:bg-green-600"
             type="submiit"
             disabled={isSubmitting}
           >
@@ -106,7 +108,7 @@ export default function RegisterForm() {
           </button>
           <button
             onClick={() => setRegisterOpen(false)}
-            className="w-1/2 px-8 py-4 text-sm bg-white text-black font-semibold border rounded m-1 botton-hover-color hover:bg-smoke-lightest"
+            className="w-1/2 px-8 py-4 text-sm bg-white text-black font-semibold border rounded ml-2 botton-hover-color hover:bg-smoke-lightest"
           >
             Cancel
           </button>

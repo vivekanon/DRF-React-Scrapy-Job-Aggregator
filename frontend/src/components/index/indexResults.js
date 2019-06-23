@@ -26,7 +26,7 @@ export function IndexResults() {
 
 export function JobRow(props) {
   return (
-    <div className="flex lg:flex-no-wrap flex-wrap w-full border-2 rounded p-4 text-truncate mt-1 mb-1 botton-hover-scale hover:border-green-light hover:shadow">
+    <div className="flex lg:flex-no-wrap flex-wrap w-full border-2 rounded p-4 text-truncate mt-1 mb-1 botton-hover-scale hover:border-green-400 hover:shadow">
       <div className="lg:w-1/6 w-1/2 flex items-center mb-2">
         <img
           className="lg:h-16 h-8"
@@ -50,7 +50,7 @@ export function JobRow(props) {
         </div>
         <div className="lg:w-2/5 w-1/2 flex justify-between items-center mt-2">
           <p className="text-xs font-semibold">Source:</p>
-          <button className="px-4 py-2 bg-blue text-xs text-white rounded">
+          <button className="px-4 py-2 bg-blue-600 text-xs text-white rounded">
             Indeed
           </button>
         </div>
@@ -74,7 +74,7 @@ export function JobRow(props) {
       </div>
 
       <div className="lg:w-1/4 w-1/2 flex lg:justify-end justify-start items-end mt-2">
-        <button className="px-4 py-2 text-xs bg-green-light text-white border rounded m-1">
+        <button className="px-4 py-2 text-xs bg-green-400 text-white border rounded m-1">
           Apply
         </button>
       </div>

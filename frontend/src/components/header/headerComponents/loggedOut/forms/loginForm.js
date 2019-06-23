@@ -57,8 +57,8 @@ export default function LoginForm() {
         <input
           className={
             (errors.email &&
-              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-top focus:outline-none botton-hover-color") ||
-            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-top botton-hover-color focus:border-green-light focus:shadow"
+              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 focus:outline-none botton-hover-color") ||
+            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color focus:border-green-400 focus:shadow"
           }
           type="text"
           placeholder="Email@email.com"
@@ -67,12 +67,14 @@ export default function LoginForm() {
           onBlur={handleBlur}
           onChange={handleChange}
         />
-        {errors.email && <p className="text-xs text-red ">{errors.email}</p>}
+        {errors.email && (
+          <p className="text-xs text-red-500 ">{errors.email}</p>
+        )}
         <input
           className={
             (errors.password &&
-              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-top focus:outline-none botton-hover-color ") ||
-            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-top botton-hover-color focus:border-green-light focus:shadow"
+              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 focus:outline-none botton-hover-color ") ||
+            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color focus:border-green-400 focus:shadow"
           }
           type="password"
           name="password"
@@ -82,12 +84,12 @@ export default function LoginForm() {
           onChange={handleChange}
         />
         {errors.password && (
-          <p className="text-xs text-red ">{errors.password}</p>
+          <p className="text-xs text-red-500 ">{errors.password}</p>
         )}
-        {authError && <p className="text-xs text-red">{authError}</p>}
+        {authError && <p className="text-xs text-red-500">{authError}</p>}
         <div className="flex justify-between">
           <button
-            className="w-1/2 px-8 py-4 text-sm bg-green-light text-white font-semibold border rounded m-1 botton-hover-color hover:bg-green-dark"
+            className="w-1/2 px-8 py-4 text-sm bg-green-400 text-white font-semibold border rounded mr-2 botton-hover-color hover:bg-green-600"
             type="submiit"
             disabled={isSubmitting}
           >
@@ -96,7 +98,7 @@ export default function LoginForm() {
           <button
             onClick={() => setLoginOpen(false)}
             type="reset"
-            className="w-1/2 px-8 py-4 text-sm bg-white text-black font-semibold border rounded m-1 botton-hover-color hover:bg-smoke-lightest"
+            className="w-1/2 px-8 py-4 text-sm bg-white text-black font-semibold border rounded ml-2 botton-hover-color hover:bg-smoke-lightest"
           >
             Cancel
           </button>
