@@ -1,14 +1,12 @@
 import React, { useContext } from "react";
-import {
-  DiJava,
-  DiJsBadge,
-  DiAws,
-  DiReact,
-  DiPython,
-  DiRubyRough,
-  DiDotnet,
-  DiMsqlServer
-} from "react-icons/di";
+import Aws from "../../images/icons/aws.png";
+import Ruby from "../../images/icons/Ruby.png";
+import Java from "../../images/icons/Java.png";
+import Javascript from "../../images/icons/Javascript.png";
+import Csharp from "../../images/icons/Csharp.png";
+import ReactIcon from "../../images/icons/react.png";
+import Python from "../../images/icons/python.png";
+import Sql from "../../images/icons/sql.png";
 import { FetchContext } from "../../store/fetch";
 import axios from "axios";
 
@@ -45,13 +43,11 @@ export function LanguageCard(props) {
   return (
     <>
       <div
-        className="lg:w-1/5 md:w-2/5 w-2/5 flex flex-grow rounded border-2 lg:p-6 p-4 lg:m-2 m-1 bg-white botton-hover-y hover:shadow hover:border-green-400 cursor-pointer"
+        className="lg:w-1/5 md:w-2/5 w-2/5 flex flex-grow rounded border-2 lg:p-6 p-4 lg:m-2 m-1 bg-white botton-hover-y hover:shadow hover:border-green-400 cursor-pointer "
         onClick={handleClick}
       >
-        <div className="w-1/2 flex justify-center items-center">
-          <p className="text-3xl text-truncate font-semibold">
-            {props.languageIcon}
-          </p>
+        <div className="w-1/2 flex justify-center items-center relative  h-full">
+          <img className="absolute " src={props.languageIcon} />
         </div>
         <div className="flex flex-wrap flex-grow lg:text-left md:text-left text-right items-start">
           <div className="w-full">
@@ -67,54 +63,54 @@ export function LanguageCard(props) {
     </>
   );
 }
-DiJava, DiJsBadge, DiAws, DiReact, DiPython;
+
 const languages = [
   {
     id: 0,
-    languageIcon: <DiJava />,
+    languageIcon: Java,
     language: "Java",
     bgColor: "bg-blue-600-lighter"
   },
   {
     id: 1,
-    languageIcon: <DiJsBadge />,
+    languageIcon: Javascript,
     language: "Javascript",
     bgColor: "bg-yellow-light"
   },
   {
     id: 2,
-    languageIcon: <DiMsqlServer />,
-    language: "MySQL",
+    languageIcon: Sql,
+    language: "SQL",
     bgColor: "bg-blue-600"
   },
   {
     id: 3,
-    languageIcon: <DiAws />,
+    languageIcon: Aws,
     language: "AWS",
     bgColor: "bg-orange"
   },
   {
     id: 4,
-    languageIcon: <DiPython />,
+    languageIcon: Python,
     language: "Python",
     bgColor: "bg-blue-600-dark"
   },
   {
     id: 5,
-    languageIcon: <DiReact />,
+    languageIcon: ReactIcon,
     language: "React",
     bgColor: "bg-blue-600"
   },
   {
     id: 6,
-    languageIcon: <DiRubyRough />,
+    languageIcon: Ruby,
     language: "Ruby",
     bgColor: "bg-red-light"
   },
   {
     id: 7,
-    languageIcon: <DiDotnet />,
-    language: ".Net",
+    languageIcon: Csharp,
+    language: "Csharp",
     bgColor: "bg-blue-600"
   }
 ];

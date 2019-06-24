@@ -2,7 +2,9 @@ import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import useFormValidation from "../../formAuth/useFormValidation";
 import validateAuth from "../../formAuth/validateAuth";
+import FormTop from "../formTop";
 import { LoginContext } from "../../../../../store/login";
+import FormBottom from "../formBottom";
 
 const INITIAL_STATE = {
   email: "",
@@ -49,7 +51,8 @@ export default function LoginForm() {
   }, [isLoggedIn]);
 
   return (
-    <div className="flex flex-col lg:w-1/2 w-full justify-between h-full">
+    <div className="flex flex-col lg:w-1/2 flex-grow w-full justify-between h-full p-8 z-20">
+      <FormTop />
       <form
         className="flex flex-col justify-around rounded flex-1 mt-2 mb-2"
         onSubmit={handleSubmit}
@@ -57,8 +60,8 @@ export default function LoginForm() {
         <input
           className={
             (errors.email &&
-              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 focus:outline-none botton-hover-color") ||
-            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color focus:border-green-400 focus:shadow"
+              "border-red border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 font-semibold focus:outline-none botton-hover-color bg-gray-100") ||
+            "focus:outline-none  border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color font-semibold bg-gray-100 focus:border-green-400 focus:shadow"
           }
           type="text"
           placeholder="Email@email.com"
@@ -73,8 +76,8 @@ export default function LoginForm() {
         <input
           className={
             (errors.password &&
-              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 focus:outline-none botton-hover-color ") ||
-            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color focus:border-green-400 focus:shadow"
+              "border-red border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 font-semibold focus:outline-none botton-hover-color bg-gray-100 ") ||
+            "focus:outline-none border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color font-semibold bg-gray-100 focus:border-green-400  focus:shadow"
           }
           type="password"
           name="password"
@@ -104,6 +107,7 @@ export default function LoginForm() {
           </button>
         </div>
       </form>
+      <FormBottom />
     </div>
   );
 }

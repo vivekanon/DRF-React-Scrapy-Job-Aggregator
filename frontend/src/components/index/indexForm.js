@@ -10,9 +10,7 @@ const initialState = {
 export function IndexForm() {
   const [isFocused, setIsFocused] = useState(false);
   const [values, setValue] = useState(initialState);
-  const { isFetchingData, setFetchData, jobs, setJobs } = useContext(
-    FetchContext
-  );
+  const { isLoading, setIsLoading, jobs, setJobs } = useContext(FetchContext);
   const focus = () => setIsFocused(true);
   const focusOut = () => setIsFocused(false);
 
@@ -34,6 +32,7 @@ export function IndexForm() {
       });
   }
   useEffect(() => {
+    setIsLoading(true);
     async function initialFetch() {
       await axios
         .get("http://127.0.0.1:8000/jobs/")

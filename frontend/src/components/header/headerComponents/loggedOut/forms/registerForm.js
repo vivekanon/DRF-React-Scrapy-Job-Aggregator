@@ -3,7 +3,8 @@ import validateRegister from "../../formAuth/validateRegister";
 import useFormValidation from "../../formAuth/useFormValidation";
 import { LoginContext } from "../../../../../store/login";
 import axios from "axios";
-
+import FormTop from "../formTop";
+import FormBottom from "../formBottom";
 const INITIAL_STATE = {
   email: "",
   password: ""
@@ -44,7 +45,8 @@ export default function RegisterForm() {
       });
   }
   return (
-    <div className="flex flex-col lg:w-1/2 w-full justify-between h-full">
+    <div className="flex flex-col lg:w-1/2 w-full flex-grow justify-between h-full p-8 z-20">
+      <FormTop />
       <form
         className="flex flex-col justify-around rounded flex-1 mt-2 mb-2 "
         onSubmit={handleSubmit}
@@ -52,8 +54,8 @@ export default function RegisterForm() {
         <input
           className={
             (errors.email &&
-              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 focus:outline-none botton-hover-color") ||
-            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color focus:border-green-400"
+              "border-red border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 focus:outline-none botton-hover-color font-semibold bg-gray-100") ||
+            "focus:outline-none border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color focus:border-green-400 font-semibold bg-gray-100"
           }
           type="text"
           placeholder="Email@email.com"
@@ -68,8 +70,8 @@ export default function RegisterForm() {
         <input
           className={
             (errors.password1 &&
-              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 focus:outline-none botton-hover-color") ||
-            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color focus:border-green-400"
+              "border-red border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 focus:outline-none botton-hover-color font-semibold bg-gray-100") ||
+            "focus:outline-none border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color focus:border-green-400 font-semibold bg-gray-100"
           }
           type="password"
           name="password1"
@@ -84,8 +86,8 @@ export default function RegisterForm() {
         <input
           className={
             (errors.password2 &&
-              "border-red bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 focus:outline-none botton-hover-color") ||
-            "focus:outline-none bg-white border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color focus:border-green-400"
+              "border-red border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 focus:outline-none botton-hover-color font-semibold bg-gray-100") ||
+            "focus:outline-none border-2 rounded text-base appearance-none w-full py-4 px-4 text-blue-800 botton-hover-color focus:border-green-400 font-semibold bg-gray-100"
           }
           type="password"
           name="password2"
@@ -114,6 +116,7 @@ export default function RegisterForm() {
           </button>
         </div>
       </form>
+      <FormBottom />
     </div>
   );
 }

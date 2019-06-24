@@ -23,7 +23,7 @@ export default function LoginModal(props) {
       className="fixed flex w-full h-full bg-transparent shadow-lg top-0 left-0 right-0 bottom-0 bg-smoke-200 modal-translate"
       ref={wrapperRef}
     >
-      <div className="flex relative content-center flex-wrap items-center self-center modal-translate h-80 min-h-80 lg:w-1/2 w-5/6 bg-white shadow rounded-sm p-8">
+      <div className="flex relative flex-wrap modal-translate modal-size lg:w-1/2 w-5/6 bg-white shadow rounded-sm ">
         <HeroArea />
         <LoginForm />
       </div>

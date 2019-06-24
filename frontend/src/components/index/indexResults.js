@@ -3,13 +3,12 @@ import Loader from "../misc/loader";
 import { FetchContext } from "../../store/fetch";
 
 export function IndexResults() {
-  const { jobs } = useContext(FetchContext);
+  const { jobs, isLoading, setIsLoading } = useContext(FetchContext);
   return (
     <div className="relative bg-white flex flex-col w-full justify-start lg:mx-auto montserrat">
       <div className="flex flex-col lg:w-3/4 w-5/6 items-start justify-center mx-auto">
         <p className="lg:pl-2 pt-6 pb-6 font-semibold">Latest Jobs</p>
         <div className="w-full flex justify-around flex-wrap mx-auto">
-          {console.log(jobs)}
           {jobs.jobs ? (
             jobs.jobs.map((job, id) => (
               <JobRow key={id} title={job.title} date={job.created_date} />
@@ -18,7 +17,6 @@ export function IndexResults() {
             <Loader />
           )}
         </div>
-        {console.log(jobs.jobs)}
       </div>
     </div>
   );
