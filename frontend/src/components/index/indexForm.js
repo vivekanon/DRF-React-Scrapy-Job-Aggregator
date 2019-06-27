@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
+import { navigate } from 'gatsby'
 import { FetchContext } from "../../store/fetch";
 import axios from "axios";
 
@@ -24,6 +25,7 @@ export function IndexForm() {
   async function handleSubmit(e) {
     const { search, location } = values;
     e.preventDefault();
+    navigate('/jobs')
     await axios
       .get(`http://127.0.0.1:8000/?search=${search}`)
       .then(response => setJobs({ jobs: response.data }))

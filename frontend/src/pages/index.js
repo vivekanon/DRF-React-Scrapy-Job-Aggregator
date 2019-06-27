@@ -10,7 +10,7 @@ import "../components/index/index.css";
 
 function IndexPage() {
   return (
-    <Layout>
+      <>
       <SEO
         title="Home"
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
@@ -19,7 +19,7 @@ function IndexPage() {
       <IndexForm />
       <IndexLanguage />
       <IndexResults />
-    </Layout>
+    </>
   );
 }
 

@@ -5,6 +5,12 @@ module.exports = {
     author: `@taylorbryant`
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+          component: require.resolve(`./src/components/misc/layout.js`)
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
