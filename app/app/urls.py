@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from api.views import ListJob, DetailJob, FavoriteJob, FavoriteList, SearchList
+from api.views import ListJob, DetailJob, FavoriteJob, FavoriteList, SearchList, ListCompany, CompanyCount
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("jobs/", ListJob, name="jobs"),
+    path("jobs/", ListJob.as_view(), name="jobs"),
     path("jobs/<int:pk>", DetailJob.as_view(), name="job detail"),
+    path("company/", CompanyCount.as_view(), name="company list"),
+    path("company/<company_name>", ListCompany.as_view(), name="company"),
     path("", SearchList.as_view(), name="search"),
     path("favorite/<id>", FavoriteJob, name="favorite"),
     path('favorite/', FavoriteList, name="favorite jobs"),

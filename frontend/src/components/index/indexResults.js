@@ -4,19 +4,21 @@ import { FetchContext } from "../../store/fetch";
 
 export function IndexResults() {
   const { jobs, isLoading, setIsLoading } = useContext(FetchContext);
+  const jobList = jobs.jobs.results;
   return (
     <div className="relative bg-white flex flex-col w-full justify-start lg:mx-auto montserrat">
       <div className="flex flex-col lg:w-3/4 w-5/6 items-start justify-center mx-auto">
         <p className="lg:pl-2 pt-6 pb-6 font-semibold">Latest Jobs</p>
         <div className="w-full flex justify-around flex-wrap mx-auto">
-          {jobs.jobs ? (
-            jobs.jobs.map((job, id) => (
+          {jobList ? (
+            jobList.map((job, id) => (
               <JobRow key={id} title={job.title} date={job.created_date} />
             ))
           ) : (
             <Loader />
           )}
         </div>
+        {console.log(jobs)}
       </div>
     </div>
   );
@@ -38,7 +40,7 @@ export function JobRow(props) {
           <p className="font-semibold">{props.title}</p>
         </div>
         <div className="w-full">
-          <p className="text-xs">Company Name</p>
+          <p className="text-xs">{props.title}</p>
         </div>
         <div className="w-1/2 mt-4 mb-4">
           <p className="text-xs font-semibold">City, state</p>
