@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { navigate, Link } from "gatsby";
 import { FetchContext } from "../../store/fetch";
 import axios from "axios";
-
+import { ButtonPrimary } from "../shared/button";
 const initialState = {
   search: "",
   location: ""
@@ -80,9 +80,9 @@ export function IndexForm() {
               value={values.location || ""}
             />
 
-            <button className="px-6 py-3 bg-green-400 font-semibold text-white rounded shadow-md text-xs botton-hover-color hover:bg-green-600">
+            <ButtonPrimary>
               Submit
-            </button>
+            </ButtonPrimary>
           </form>
         </div>
       </div>
