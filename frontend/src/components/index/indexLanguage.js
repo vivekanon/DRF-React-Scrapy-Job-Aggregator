@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import Aws from "../../images/icons/aws.png";
-import Ruby from "../../images/icons/Ruby.png";
-import Java from "../../images/icons/Java.png";
-import Javascript from "../../images/icons/Javascript.png";
+import Ruby from "../../images/icons/ruby.png";
+import Java from "../../images/icons/java.png";
+import Javascript from "../../images/icons/javascript.png";
 import Csharp from "../../images/icons/csharp.png";
 import ReactIcon from "../../images/icons/react.png";
 import Python from "../../images/icons/python.png";
