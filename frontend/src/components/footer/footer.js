@@ -3,9 +3,9 @@ import "../misc/reuseable.css";
 
 function Footer() {
   return (
-    <footer className="flex justify-end bg-white pt-32 pb-12  relative">
+    <footer className="flex bg-white pt-32 pb-12  relative">
       <div className="flex lg:flex-row flex-col justify-between w-4/5 mx-auto p-2 ">
-        <div className="flex lg:w-1/4 w-full  flex-wrap">
+        <div className="flex lg:w-1/4 w-full flex-wrap">
           <div className="flex">
             <h2 className="font-semibold text-blue-800 text-md underline">
               ACME CO.

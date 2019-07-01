@@ -27,7 +27,7 @@ export default function FormBottom() {
         X
       </button>
       {isRegisterOpen ? (
-        <div className="flex content-center lg:pt-8 pt-2">
+        <div className="flex content-center items-center lg:pt-8 pt-2">
           <p className="text-blue-800 lg:text-base text-base">
             Have an account already?
           </p>
@@ -39,7 +39,7 @@ export default function FormBottom() {
           </p>
         </div>
       ) : (
-        <div className="flex content-center lg:pt-8 pt-2">
+        <div className="flex content-center  pt-2">
           <p className="text-blue-800 lg:text-base text-base">
             Don't have an account?
           </p>

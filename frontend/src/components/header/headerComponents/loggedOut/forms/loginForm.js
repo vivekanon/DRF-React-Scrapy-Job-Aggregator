@@ -51,7 +51,7 @@ export default function LoginForm() {
   }, [isLoggedIn]);
 
   return (
-    <div className="flex flex-col lg:w-1/2 flex-grow w-full justify-between h-full p-8 z-20">
+    <div className="flex flex-col lg:w-1/2 flex-grow flex-1 w-full justify-between h-full p-8 z-20">
       <FormTop />
       <form
         className="flex flex-col justify-around rounded flex-1 mt-2 mb-2"

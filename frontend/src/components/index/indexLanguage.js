@@ -47,7 +47,7 @@ export function LanguageCard(props) {
         onClick={handleClick}
       >
         <div className="w-1/2 flex justify-center items-center relative  h-full">
-          <img className="absolute " src={props.languageIcon} />
+          <img className="bg-cover" src={props.languageIcon} />
         </div>
         <div className="flex flex-wrap flex-grow lg:text-left md:text-left text-right items-start">
           <div className="w-full">
