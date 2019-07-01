@@ -3,7 +3,7 @@ import Aws from "../../images/icons/aws.png";
 import Ruby from "../../images/icons/Ruby.png";
 import Java from "../../images/icons/Java.png";
 import Javascript from "../../images/icons/Javascript.png";
-import Csharp from "../../images/icons/Csharp.png";
+import Csharp from "../../images/icons/csharp.png";
 import ReactIcon from "../../images/icons/react.png";
 import Python from "../../images/icons/python.png";
 import Sql from "../../images/icons/sql.png";
