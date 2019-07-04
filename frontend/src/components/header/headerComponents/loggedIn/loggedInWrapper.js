@@ -15,7 +15,7 @@ export default function LoggedInWrapper() {
         Logout
       </button>
       <button
-        className="lg:px-6 lg:py-3 py-2 px-3 bg-green-400 font-semibold text-white rounded shadow-md text-xs botton-hover-color hover:bg-green-600"
+        className="lg:px-6 lg:py-3 py-2 px-3 bg-green-400 font-semibold text-white rounded shadow-md text-xs button-hover-color hover:bg-green-600"
         onClick={() => navigate("/favorite")}
       >
         Profile

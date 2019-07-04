@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import { FetchContext } from "../../store/fetch";
+import axios from "axios";
 import Aws from "../../images/icons/aws.png";
 import Ruby from "../../images/icons/Ruby.png";
 import Java from "../../images/icons/Java.png";
@@ -7,13 +9,12 @@ import Csharp from "../../images/icons/Csharp.png";
 import ReactIcon from "../../images/icons/react.png";
 import Python from "../../images/icons/python.png";
 import Sql from "../../images/icons/sql.png";
-import { FetchContext } from "../../store/fetch";
-import axios from "axios";
+import { Container } from '../shared/container'
 
 export function IndexLanguage() {
   return (
-    <div className="relative bg-white flex flex-col w-full justify-start lg:mx-auto montserrat">
-      <div className="flex flex-col lg:w-3/4 w-5/6 items-start justify-center mx-auto">
+    <Container>
+      <div className="flex flex-col w-5/6 items-start justify-center mx-auto">
         <p className="lg:pl-2 pt-6 pb-6 font-semibold">Popular Skills</p>
         <div className="w-full flex justify-around flex-wrap mx-auto">
           {languages.map((language, id) => (
@@ -26,7 +27,7 @@ export function IndexLanguage() {
           ))}
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
 
@@ -43,7 +44,7 @@ export function LanguageCard(props) {
   return (
     <>
       <div
-        className="lg:w-1/5 md:w-2/5 w-2/5 flex flex-grow rounded border-2 lg:p-6 p-4 lg:m-2 m-1 bg-white botton-hover-y hover:shadow hover:border-green-400 cursor-pointer "
+        className="lg:w-1/6 md:w-2/5 w-2/5 flex flex-grow rounded border-2 lg:p-6 p-4 lg:flex-1 sm:mt-2 mr-2 bg-white button-hover-y hover:shadow hover:border-green-400 cursor-pointer card"
         onClick={handleClick}
       >
         <div className="w-1/2 flex justify-center items-center relative  h-full">

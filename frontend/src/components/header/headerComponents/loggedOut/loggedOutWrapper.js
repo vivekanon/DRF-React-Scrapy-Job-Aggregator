@@ -1,9 +1,10 @@
-import React, { useRef, useContext } from "react";
+import React, { useContext, useState } from "react";
 import { LoginContext } from "../../../../store/login";
-import RegisterModal from "../loggedOut/modal/registerModal";
-import LoginModal from "../loggedOut/modal/loginModal";
-import { Button } from "../../../shared/button";
+import Modal from "./modal/modal";
+import { Button, ButtonPrimary } from "../../../shared/button";
+
 export default function LoggedOutWrapper() {
+  const [loginType, setLoginType] = useState();
   function clearAll() {
     setRegisterOpen(false);
     setLoginOpen(false);
@@ -11,10 +12,12 @@ export default function LoggedOutWrapper() {
   function toggleLogin() {
     setLoginOpen(prevIsLoginOpen => !prevIsLoginOpen);
     setRegisterOpen(false);
+    setLoginType('login');
   }
   function toggleRegister() {
     setRegisterOpen(prevIsRegisterOpen => !prevIsRegisterOpen);
     setLoginOpen(false);
+    setLoginType('register');
   }
 
   const {
@@ -27,19 +30,20 @@ export default function LoggedOutWrapper() {
   return (
     <div className="relative">
       <Button
-        className=""
+        loginType='login'
         onClick={toggleLogin}
       >
         Login
       </Button>
-      {isLoginOpen ? <LoginModal clearAll={clearAll} /> : null}
-      <button
-        className="lg:px-6 lg:py-3 py-2 px-3 bg-green-400 font-semibold text-white rounded shadow-md text-xs botton-hover-color hover:bg-green-600"
+      {isLoginOpen ? <Modal loginType={loginType} clearAll={clearAll} /> : null}
+      <ButtonPrimary
+        loginType='register'
+        className="button-hover-color hover:bg-green-600"
         onClick={toggleRegister}
       >
         Register
-      </button>
-      {isRegisterOpen ? <RegisterModal clearAll={clearAll} /> : null}
+      </ButtonPrimary>
+      {isRegisterOpen ? <Modal clearAll={clearAll} /> : null}
     </div>
   );
 }

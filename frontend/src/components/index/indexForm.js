@@ -1,17 +1,14 @@
 import React, { useState, useContext, useEffect } from "react";
-import { navigate, Link } from "gatsby";
 import { FetchContext } from "../../store/fetch";
-import axios from "axios";
+import { navigate, Link } from "gatsby";
 import { ButtonPrimary } from "../shared/button";
-const initialState = {
-  search: "",
-  location: ""
-};
+import { Container } from "../shared/container";
+import { Card } from "../shared/card";
+import axios from "axios";
 
 export function IndexForm() {
   const [isFocused, setIsFocused] = useState(false);
-  const [values, setValue] = useState(initialState);
-  const { isLoading, setIsLoading, jobs, setJobs } = useContext(FetchContext);
+  const { setIsLoading, setJobs, values, setValue } = useContext(FetchContext);
   const focus = () => setIsFocused(true);
   const focusOut = () => setIsFocused(false);
 
@@ -48,15 +45,15 @@ export function IndexForm() {
 
   return (
     <>
-      <div className="flex w-full bg-white montserrat lg:pl-2 lg:pr-2 pl-4 pr-4 lg:pt-12 pt-6 pb-6">
+      <Container>
         <div
-          className="lg:w-3/4 w-full mx-auto flex rounded border-2 botton-hover-color"
+          className="w-5/6 mx-auto flex rounded border-2 button-hover-color mt-4"
           style={
             isFocused ? { borderColor: "#51d88a" } : { borderColor: "#dae1e7" }
           }
         >
           <form
-            className="h-full flex flex-no-wrap flex-1 p-4"
+            className="h-full flex flex-no-wrap flex-1 p-4 bg-white"
             onSubmit={handleSubmit}
           >
             <input
@@ -80,12 +77,12 @@ export function IndexForm() {
               value={values.location || ""}
             />
 
-            <ButtonPrimary>
+            <ButtonPrimary className="button-hover-color hover:bg-green-600">
               Submit
             </ButtonPrimary>
           </form>
         </div>
-      </div>
+      </Container>
       <IndexSort />
     </>
   );
@@ -96,49 +93,64 @@ export function IndexSort() {
   async function setBase() {
     navigate("/");
     await axios
-      .get(`http://127.0.0.1:8000/jobs`)
+      .get('http://127.0.0.1:8000/jobs')
       .then(response => setJobs({ jobs: response.data }))
       .catch(error => {
         console.log(error);
       });
   }
   return (
-    <>
-      <div className="flex w-full bg-white montserrat pb-12">
-        <div className="lg:w-3/4 w-4/5 mx-auto flex justify-center ">
+    <Container>
+      <div className="w-5/6 mx-auto flex justify-center">
+        <Card className="button-hover-scale ml-0" >
           <Link
-            className="flex items-center justify-center w-1/4 lg:p-4 p-2 m-2 border-2 rounded hover:border-green-400 botton-hover-scale cursor-pointer hover:shadow"
-            to="/"
+            className="lg:text-base text-xs border-2 truncate font-semibold w-full h-full flex justify-center lg:p-4 p-2 bg-white button-hover-color hover:border-green-400"
             activeClassName="border-green-400 shadow"
+            to="/"
             onClick={setBase}
           >
-            <p className="lg:text-base text-xs truncate">Home</p>
+            Home
           </Link>
+        </Card>
+        <Card
+          className="button-hover-scale"
+          activeClassName="border-green-400 shadow"
+        >
           <Link
-            className="flex items-center justify-center w-1/4 lg:p-4 p-2 m-2 border-2 rounded hover:border-green-400 botton-hover-scale cursor-pointer hover:shadow"
+            className="lg:text-base text-xs border-2 truncate font-semibold w-full h-full flex justify-center lg:p-4 p-2 bg-white button-hover-color hover:border-green-400"
+            to="/jobs"
+          >
+            Jobs
+          </Link>
+        </Card>
+        <Card
+          className="button-hover-scale"
+          to="/jobs"
+          activeClassName="border-green-400 shadow"
+        >
+          <Link
+            className="lg:text-base text-xs border-2 truncate font-semibold w-full h-full flex justify-center lg:p-4 p-2 bg-white button-hover-color hover:border-green-400"
             to="/jobs"
             activeClassName="border-green-400 shadow"
           >
-            <p className="lg:text-base text-xs truncate">Jobs</p>
+            Companies
           </Link>
+        </Card>
+
+        <Card
+          className="button-hover-scale mr-0"
+          to="/jobs"
+          activeClassName="border-green-400 shadow"
+        >
           <Link
-            className="flex items-center justify-center w-1/4 lg:p-4 p-2 m-2 border-2 rounded hover:border-green-400 botton-hover-scale cursor-pointer hover:shadow"
-            to="/companies"
+            className="lg:text-base text-xs border-2 truncate font-semibold w-full h-full flex justify-center lg:p-4 p-2 bg-white button-hover-color hover:border-green-400"
+            to="/jobs"
             activeClassName="border-green-400 shadow"
-            onClick={setBase}
           >
-            <p className="lg:text-base text-xs truncate">Companies</p>
+            Trending
           </Link>
-          <Link
-            className="flex items-center justify-center w-1/4 lg:p-4 p-2 m-2 border-2 rounded hover:border-green-400 botton-hover-scale cursor-pointer hover:shadow"
-            to="/trending"
-            activeClassName="border-green-400 shadow"
-            onClick={setBase}
-          >
-            <p className="lg:text-base text-xs truncate">Trending</p>
-          </Link>
-        </div>
+        </Card>
       </div>
-    </>
+    </Container>
   );
 }

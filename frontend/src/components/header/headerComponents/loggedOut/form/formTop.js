@@ -1,10 +1,21 @@
 import React, { useContext } from "react";
-import { LoginContext } from "../../../../store/login";
+import { LoginContext } from "../../../../../store/login";
 
 export default function FormTop() {
-  const { isRegisterOpen } = useContext(LoginContext);
+  const { isRegisterOpen, setRegisterOpen, setLoginOpen } = useContext(LoginContext);
+
+  function clearAll() {
+    setRegisterOpen(false);
+    setLoginOpen(false);
+  }
   return (
     <div className="flex flex-col justify-between lg:pb-8 pb-2">
+      <button
+        className="text-blue-800 absolute top-0 right-0 mr-4 mt-4 p-2 cursor-pointer lg:text-base text-base"
+        onClick={clearAll}
+      >
+        X
+      </button>
       {isRegisterOpen ? (
         <>
           <p className="text-blue-800 font-semibold pb-8 lg:text-base text-base">

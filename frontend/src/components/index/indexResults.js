@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
-import Loader from "../misc/loader";
 import { FetchContext } from "../../store/fetch";
+import { Container } from '../shared/container'
+import Loader from "../misc/loader";
 
 export function IndexResults() {
   const { jobs, isLoading, setIsLoading } = useContext(FetchContext);
   const jobList = jobs.jobs.results;
   return (
-    <div className="relative bg-white flex flex-col w-full justify-start lg:mx-auto montserrat">
-      <div className="flex flex-col lg:w-3/4 w-5/6 items-start justify-center mx-auto">
+    <Container>
+      <div className="flex flex-col w-5/6 items-start justify-center mx-auto">
         <p className="lg:pl-2 pt-6 pb-6 font-semibold">Latest Jobs</p>
         <div className="w-full flex justify-around flex-wrap mx-auto">
           {jobList ? (
@@ -20,13 +21,13 @@ export function IndexResults() {
         </div>
         {console.log(jobs)}
       </div>
-    </div>
+    </Container>
   );
 }
 
 export function JobRow(props) {
   return (
-    <div className="flex lg:flex-no-wrap flex-wrap w-full border-2 rounded p-4 text-truncate mt-1 mb-1 botton-hover-scale hover:border-green-400 hover:shadow">
+    <div className="flex lg:flex-no-wrap bg-white flex-wrap w-full border-2 rounded p-4 text-truncate mt-1 mb-1 button-hover-scale hover:border-green-400 hover:shadow">
       <div className="lg:w-1/6 w-1/2 flex items-center mb-2">
         <img
           className="lg:h-16 h-8"
