@@ -44,13 +44,13 @@ export function LanguageCard(props) {
   return (
     <>
       <div
-        className="lg:w-1/6 md:w-2/5 w-2/5 flex flex-grow rounded border-2 lg:p-6 p-4 lg:flex-1 sm:mt-2 mr-2 bg-white button-hover-y hover:shadow hover:border-green-400 cursor-pointer card"
+        className="lg:w-1/6 md:w-2/5 w-2/5 flex flex-grow rounded border-2  p-4 lg:flex-1 sm:mt-2 mr-2 bg-white button-hover-y hover:shadow hover:border-green-400 cursor-pointer card"
         onClick={handleClick}
       >
-        <div className="w-1/2 flex justify-center items-center relative  h-full">
+        <div className="w-1/2 flex justify-start items-center content-center relative  h-full">
           <img className="absolute " src={props.languageIcon} />
         </div>
-        <div className="flex flex-wrap flex-grow lg:text-left md:text-left text-right items-start">
+        <div className="flex flex-wrap flex-grow lg:text-right md:text-left text-right items-start">
           <div className="w-full">
             <p className="lg:text-md text-xs font-semibold text-blue-800">
               {props.language}

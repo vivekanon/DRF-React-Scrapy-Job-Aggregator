@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+p, h1, h2, a {
+  font-family: 'Roboto', sans-serif;
+}
 
 .montserrat {
   font-family: "Montserrat", sans-serif;

@@ -93,7 +93,7 @@ export function IndexSort() {
   async function setBase() {
     navigate("/");
     await axios
-      .get('http://127.0.0.1:8000/jobs')
+      .get("http://127.0.0.1:8000/jobs")
       .then(response => setJobs({ jobs: response.data }))
       .catch(error => {
         console.log(error);
@@ -102,7 +102,7 @@ export function IndexSort() {
   return (
     <Container>
       <div className="w-5/6 mx-auto flex justify-center">
-        <Card className="button-hover-scale ml-0" >
+        <Card className="button-hover-scale ml-0">
           <Link
             className="lg:text-base text-xs border-2 truncate font-semibold w-full h-full flex justify-center lg:p-4 p-2 bg-white button-hover-color hover:border-green-400"
             activeClassName="border-green-400 shadow"
@@ -112,39 +112,29 @@ export function IndexSort() {
             Home
           </Link>
         </Card>
-        <Card
-          className="button-hover-scale"
-          activeClassName="border-green-400 shadow"
-        >
+        <Card className="button-hover-scale">
           <Link
             className="lg:text-base text-xs border-2 truncate font-semibold w-full h-full flex justify-center lg:p-4 p-2 bg-white button-hover-color hover:border-green-400"
             to="/jobs"
+            activeClassName="border-green-400 shadow"
           >
             Jobs
           </Link>
         </Card>
-        <Card
-          className="button-hover-scale"
-          to="/jobs"
-          activeClassName="border-green-400 shadow"
-        >
+        <Card className="button-hover-scale">
           <Link
             className="lg:text-base text-xs border-2 truncate font-semibold w-full h-full flex justify-center lg:p-4 p-2 bg-white button-hover-color hover:border-green-400"
-            to="/jobs"
+            to="/companies"
             activeClassName="border-green-400 shadow"
           >
             Companies
           </Link>
         </Card>
 
-        <Card
-          className="button-hover-scale mr-0"
-          to="/jobs"
-          activeClassName="border-green-400 shadow"
-        >
+        <Card className="button-hover-scale mr-0">
           <Link
             className="lg:text-base text-xs border-2 truncate font-semibold w-full h-full flex justify-center lg:p-4 p-2 bg-white button-hover-color hover:border-green-400"
-            to="/jobs"
+            to="/trending"
             activeClassName="border-green-400 shadow"
           >
             Trending
