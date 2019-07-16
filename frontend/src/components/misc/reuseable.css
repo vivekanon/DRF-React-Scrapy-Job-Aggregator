@@ -1,16 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat|PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
-p, h1, h2, a {
+p,
+h1,
+h2,
+a {
   font-family: 'Roboto', sans-serif;
 }
 
 .montserrat {
   font-family: "Montserrat", sans-serif;
-}
-
-.PTSans {
-  font-family: "PT Sans", sans-serif;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -33,3 +32,37 @@ input[type=number]::-webkit-outer-spin-button {
   overflow: hidden;
 }
 
+.transform {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.card {
+  background-image: linear-gradient(180deg, #fff, #f5f5fa);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 11px 0 rgba(37, 44, 97, .15), 0 1px 3px 0 rgba(93, 100, 148, .2);
+}
+
+.card-shadow:hover {
+  box-shadow: 0 8px 22px 0 rgba(37, 44, 97, .15), 0 4px 6px 0 rgba(93, 100, 148, .2);
+}
+
+.card-shadow:active {
+  box-shadow: 0 8px 22px 0 rgba(37, 44, 97, .15), 0 4px 6px 0 rgba(93, 100, 148, .2);
+}
+
+.card-shadow-indicator:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #5A67D8;
+  overflow: hidden;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}

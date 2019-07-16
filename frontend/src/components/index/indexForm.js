@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { FetchContext } from "../../store/fetch";
 import { navigate, Link } from "gatsby";
 import { ButtonPrimary } from "../shared/button";
@@ -30,30 +30,18 @@ export function IndexForm() {
         console.log(error);
       });
   }
-  useEffect(() => {
-    setIsLoading(true);
-    async function initialFetch() {
-      await axios
-        .get("http://127.0.0.1:8000/jobs/")
-        .then(response => setJobs({ jobs: response.data }))
-        .catch(error => {
-          console.log(error);
-        });
-    }
-    initialFetch();
-  }, []);
 
   return (
     <>
       <Container>
         <div
-          className="w-5/6 mx-auto flex rounded border-2 button-hover-color mt-4"
+          className="w-5/6 mx-auto flex rounded mt-4"
           style={
             isFocused ? { borderColor: "#51d88a" } : { borderColor: "#dae1e7" }
           }
         >
           <form
-            className="h-full flex flex-no-wrap flex-1 p-4 bg-white"
+            className="h-full flex flex-no-wrap flex-1 p-4 bg-indigo-50"
             onSubmit={handleSubmit}
           >
             <input
@@ -102,40 +90,40 @@ export function IndexSort() {
   return (
     <Container>
       <div className="w-5/6 mx-auto flex justify-center">
-        <Card className="button-hover-scale ml-0">
+        <Card className=" transform relative ml-0 ">
           <Link
-            className="lg:text-base text-xs border-2 truncate font-semibold w-full h-full flex justify-center lg:p-4 p-2 bg-white button-hover-color hover:border-green-400"
-            activeClassName="border-green-400 shadow"
+            className="truncate w-full h-full flex justify-center p-4 button-hover-color font-thin"
+            activeClassName="card-shadow-indicator font-semibold"
             to="/"
             onClick={setBase}
           >
             Home
           </Link>
         </Card>
-        <Card className="button-hover-scale">
+        <Card className=" transform relative">
           <Link
-            className="lg:text-base text-xs border-2 truncate font-semibold w-full h-full flex justify-center lg:p-4 p-2 bg-white button-hover-color hover:border-green-400"
+            className="truncate w-full h-full flex justify-center p-4 button-hover-color font-thin"
             to="/jobs"
-            activeClassName="border-green-400 shadow"
+            activeClassName="card-shadow-indicator"
           >
             Jobs
           </Link>
         </Card>
-        <Card className="button-hover-scale">
+        <Card className=" transform relative">
           <Link
-            className="lg:text-base text-xs border-2 truncate font-semibold w-full h-full flex justify-center lg:p-4 p-2 bg-white button-hover-color hover:border-green-400"
+            className="truncate w-full h-full flex justify-center p-4 button-hover-color font-thin"
             to="/companies"
-            activeClassName="border-green-400 shadow"
+            activeClassName="card-shadow-indicator"
           >
             Companies
           </Link>
         </Card>
 
-        <Card className="button-hover-scale mr-0">
+        <Card className=" transform relative mr-0">
           <Link
-            className="lg:text-base text-xs border-2 truncate font-semibold w-full h-full flex justify-center lg:p-4 p-2 bg-white button-hover-color hover:border-green-400"
+            className="truncate w-full h-full flex justify-center p-4 button-hover-color font-thin"
             to="/trending"
-            activeClassName="border-green-400 shadow"
+            activeClassName="card-shadow-indicator"
           >
             Trending
           </Link>

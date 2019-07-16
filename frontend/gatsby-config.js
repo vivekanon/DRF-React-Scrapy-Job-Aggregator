@@ -5,12 +5,6 @@ module.exports = {
     author: `@taylorbryant`
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-polyfill-io`,
-      options: {
-         features: [`Array.prototype.reduce`, `Object.keys`, `es2016`, `es2017`, `es6`, `es7`, `es6.array.iterator`, `Array.prototype.keys`, `Element.prototype.cloneNode`, `fetch`]
-      },
-   },
     "gatsby-plugin-tailwindcss",
     "gatsby-plugin-styled-components",
     {

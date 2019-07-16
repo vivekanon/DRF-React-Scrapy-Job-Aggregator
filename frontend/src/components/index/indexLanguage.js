@@ -9,7 +9,7 @@ import Csharp from "../../images/icons/csharp.png";
 import ReactIcon from "../../images/icons/react.png";
 import Python from "../../images/icons/python.png";
 import Sql from "../../images/icons/sql.png";
-import { Container } from '../shared/container'
+import { Container } from "../shared/container";
 
 export function IndexLanguage() {
   return (
@@ -44,10 +44,10 @@ export function LanguageCard(props) {
   return (
     <>
       <div
-        className="lg:w-1/6 md:w-2/5 w-2/5 flex flex-grow rounded border-2  p-4 lg:flex-1 sm:mt-2 mr-2 bg-white button-hover-y hover:shadow hover:border-green-400 cursor-pointer card"
+        className="lg:w-1/6 md:w-2/5 w-2/5 flex flex-grow rounded lg:p-6 p-4 lg:flex-1 sm:mt-2 mr-2 cursor-pointer card card-shadow transform relative "
         onClick={handleClick}
       >
-        <div className="w-1/2 flex justify-start items-center content-center relative  h-full">
+        <div className="w-1/2 flex justify-start items-center content-center relative h-full">
           <img className="absolute " src={props.languageIcon} />
         </div>
         <div className="flex flex-wrap flex-grow lg:text-right md:text-left text-right items-start">
