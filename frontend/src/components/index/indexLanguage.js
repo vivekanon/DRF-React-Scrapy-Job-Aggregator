@@ -44,7 +44,7 @@ export function LanguageCard(props) {
   }
   return (
       <div
-        className="lg:w-1/6 md:w-2/5 w-2/5 flex flex-grow rounded lg:p-6 p-4 lg:flex-1 sm:mt-2 mr-2 cursor-pointer card card-shadow transform relative "
+        className="lg:w-1/6 md:w-2/5 w-2/5 flex flex-grow rounded lg:p-6 p-4 lg:flex-1 sm:mt-2 mr-2 cursor-pointer language-card card-shadow transform relative "
         onClick={handleClick}
       >
         <div className="w-1/2 flex justify-start items-center content-center relative h-full">

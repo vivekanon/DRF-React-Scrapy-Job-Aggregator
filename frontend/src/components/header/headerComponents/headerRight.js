@@ -8,7 +8,7 @@ export default function HeaderRight() {
 
   return (
     <div className="w-2/5 h-full ">
-      <div className="relative w-full h-full flex items-center justify-center text-white ">
+      <div className="relative w-full h-full flex items-center justify-end ">
         {isLoggedIn ? <LoggedInWrapper /> : <LoggedOutWrapper />}
       </div>
     </div>

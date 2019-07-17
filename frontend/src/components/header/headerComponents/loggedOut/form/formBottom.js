@@ -21,12 +21,13 @@ export default function FormBottom() {
     <div className="flex flex-col justify-between relative">
 
       {isRegisterOpen ? (
-        <div className="flex content-center lg:pt-8 pt-2 w-full justify-between items-center">
+        <div className="flex content-center lg:pt-8 pt-2 w-full justify-between items-end">
         <TextPrimary indigo>Have an account already?</TextPrimary>
           <Button 
             
             onClick={toggleLogin}>
             <TextPrimary
+              border
               indigo>
               Log in
             </TextPrimary>
@@ -36,6 +37,7 @@ export default function FormBottom() {
         <div className="flex content-center lg:pt-8 pt-2 w-full justify-between items-center">
           <TextPrimary indigo>Don't have an account yet?</TextPrimary>
           <Button 
+            border
             onClick={toggleRegister}>
             <TextPrimary
               indigo>

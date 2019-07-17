@@ -26,7 +26,7 @@ export function IndexResults() {
 
 export function JobRow(props) {
   return (
-    <div className="flex flex-col bg-white justify-between flex-grow lg:w-1/3 w-full rounded text-truncate m-2 card card-shadow transform pb-6">
+    <div className="flex flex-col bg-white justify-between flex-grow lg:w-1/3 w-full rounded text-truncate m-2 job-card card card-shadow transform pb-6">
       <div className="flex flex-wrap w-full p-4 ">
         <div className="lg:w-1/6 w-1/2 flex items-center mb-2">
           <img
