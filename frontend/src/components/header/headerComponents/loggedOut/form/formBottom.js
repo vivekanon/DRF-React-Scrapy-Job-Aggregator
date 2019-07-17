@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { LoginContext } from "../../../../../store/login";
+import { TextPrimary } from "../../../../shared/text";
+import { Button } from "../../../../shared/button";
 
 export default function FormBottom() {
   const { setLoginOpen, isRegisterOpen, setRegisterOpen } = useContext(
@@ -9,38 +11,37 @@ export default function FormBottom() {
 
   function toggleLogin() {
     setLoginOpen(prevIsLoginOpen => !prevIsLoginOpen);
-    setRegisterOpen(false);
+    setRegisterOpen(prevIsRegisterOpen => !prevIsRegisterOpen);
   }
   function toggleRegister() {
     setRegisterOpen(prevIsRegisterOpen => !prevIsRegisterOpen);
-    setLoginOpen(false);
+    setLoginOpen(prevIsLoginOpen => !prevIsLoginOpen);
   }
   return (
     <div className="flex flex-col justify-between relative">
 
       {isRegisterOpen ? (
-        <div className="flex content-center lg:pt-8 pt-2">
-          <p className="text-blue-800 lg:text-base text-base">
-            Have an account already?
-          </p>
-          <p
-            className="text-blue-800 font-semibold cursor-pointer hover:font-bold ml-2"
-            onClick={toggleLogin}
-          >
-            Log in
-          </p>
+        <div className="flex content-center lg:pt-8 pt-2 w-full justify-between items-center">
+        <TextPrimary indigo>Have an account already?</TextPrimary>
+          <Button 
+            
+            onClick={toggleLogin}>
+            <TextPrimary
+              indigo>
+              Log in
+            </TextPrimary>
+          </Button>
         </div>
       ) : (
-        <div className="flex content-center lg:pt-8 pt-2">
-          <p className="text-blue-800 lg:text-base text-base">
-            Don't have an account?
-          </p>
-          <p
-            className="text-blue-800 font-semibold cursor-pointer hover:font-bold ml-2"
-            onClick={toggleRegister}
-          >
-            Register
-          </p>
+        <div className="flex content-center lg:pt-8 pt-2 w-full justify-between items-center">
+          <TextPrimary indigo>Don't have an account yet?</TextPrimary>
+          <Button 
+            onClick={toggleRegister}>
+            <TextPrimary
+              indigo>
+              Register
+            </TextPrimary>
+          </Button>
         </div>
       )}
     </div>

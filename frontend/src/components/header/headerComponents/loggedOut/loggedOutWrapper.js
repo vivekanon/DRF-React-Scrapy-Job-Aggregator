@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { LoginContext } from "../../../../store/login";
 import Modal from "./modal/modal";
 import { Button, ButtonPrimary } from "../../../shared/button";
+import { TextPrimary } from "../../../shared/text";
 
 export default function LoggedOutWrapper() {
   const [loginType, setLoginType] = useState();
@@ -30,18 +31,20 @@ export default function LoggedOutWrapper() {
   return (
     <div className="relative">
       <Button
+        
         loginType='login'
         onClick={toggleLogin}
       >
-        Login
+      <TextPrimary indigo>Login</TextPrimary>
+        
       </Button>
       {isLoginOpen ? <Modal loginType={loginType} clearAll={clearAll} /> : null}
       <ButtonPrimary
         loginType='register'
-        className="button-hover-color hover:bg-green-600"
+        className="transform"
         onClick={toggleRegister}
       >
-        Register
+        <TextPrimary white>Register</TextPrimary>
       </ButtonPrimary>
       {isRegisterOpen ? <Modal clearAll={clearAll} /> : null}
     </div>

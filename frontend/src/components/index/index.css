@@ -24,7 +24,7 @@
   -webkit-transform: scale(1.009);
   transform: scale(1.009);
 }
-.button-hover-color {
+.transform {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }

@@ -4,10 +4,10 @@ import { Link } from "gatsby";
 export default function HeaderLeft() {
   return (
     <div className="flex w-2/5 flex-shrink">
-      <div className="relative w-full h-full flex justify-center items-center fill-current stroke-current text-blue-800">
+      <div className="relative w-full h-full flex justify-center items-center fill-current stroke-current text-indigo-600">
         <Link to="/">
           <svg
-            className="fill-current stroke-current text-blue-800 lg:w-full w-4/5"
+            className="fill-current stroke-current text-indigo-600 lg:w-full w-4/5"
             width="152px"
             height="41px"
             viewBox="0 0 152 41"

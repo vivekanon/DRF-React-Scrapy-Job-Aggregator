@@ -21,8 +21,8 @@ export default function IndexTop() {
   return (
     <Container>
       <div className="pt-24 pb-12 flex flex-col flex-wrap justify-center items-center">
-        <h1 className="text-blue-800 text-4xl ">ACME CO.</h1>
-        <p className="text-blue-800 font-semibold pt-4 leading-loose tracking-wide">
+        <h1 className="text-indigo-600 text-4xl ">ACME CO.</h1>
+        <p className="text-indigo-600 font-semibold pt-4 leading-loose tracking-wide">
           Dev Jobs. All Sources. One Site.
         </p>
       </div>
