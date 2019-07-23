@@ -2,22 +2,12 @@ import React, { useContext, useEffect } from "react";
 import { FetchContext } from "../../store/fetch";
 import { Container } from "../shared/container";
 import axios from "axios";
+import { useFetch } from '../hooks/useFetch'
 
 export default function IndexTop() {
-  const { setLoading, setData, values, setValue } = useContext(FetchContext);
-  useEffect(() => {
-    setLoading(true);
-
-    async function initialFetch() {
-      await axios
-        .get("http://127.0.0.1:8000/jobs/")
-        .then(response => setData({ payload: response.data }))
-        .catch(error => {
-          console.log(error);
-        });
-    }
-    initialFetch();
-  }, []);
+  const { data } = useContext(FetchContext);
+  useFetch("http://127.0.0.1:8000/jobs/")
+  
   return (
     <Container>
       <div className="pt-24 pb-12 flex flex-col flex-wrap justify-center items-center">
@@ -25,6 +15,7 @@ export default function IndexTop() {
         <p className="text-indigo-600 font-semibold pt-4 leading-loose tracking-wide">
           Dev Jobs. All Sources. One Site.
         </p>
+        {console.log(data)}
       </div>
     </Container>
   );
