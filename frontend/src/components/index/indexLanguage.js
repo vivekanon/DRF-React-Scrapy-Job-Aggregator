@@ -33,11 +33,11 @@ export function IndexLanguage() {
 }
 
 export function LanguageCard(props) {
-  const { setJobs } = useContext(FetchContext);
+  const { setData } = useContext(FetchContext);
   async function handleClick() {
     await axios
       .get(`http://127.0.0.1:8000/?search=${props.language}`)
-      .then(response => setJobs({ jobs: response.data }))
+      .then(response => setData({ payload: response.data }))
       .catch(error => {
         console.log(error);
       });

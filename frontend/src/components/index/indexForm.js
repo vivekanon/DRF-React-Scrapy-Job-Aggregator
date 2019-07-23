@@ -10,7 +10,7 @@ import { TextPrimary, TextSub } from "../shared/text";
 
 export function IndexForm() {
   const [isFocused, setIsFocused] = useState(false);
-  const { setIsLoading, setJobs, values, setValue } = useContext(FetchContext);
+  const { setLoading, setData, values, setValue } = useContext(FetchContext);
   const focus = () => setIsFocused(true);
   const focusOut = () => setIsFocused(false);
 
@@ -25,12 +25,14 @@ export function IndexForm() {
     const { search, location } = values;
     e.preventDefault();
     navigate("/jobs");
+    setLoading(true);
     await axios
       .get(`http://127.0.0.1:8000/?search=${search}`)
-      .then(response => setJobs({ jobs: response.data }))
+      .then(response => setData({ payload: response.data }))
       .catch(error => {
         console.log(error);
       });
+      setLoading(false);
   }
 
   return (
@@ -46,7 +48,7 @@ export function IndexForm() {
             className="h-full flex flex-no-wrap flex-1 p-4 bg-indigo-50 "
             onSubmit={handleSubmit}
           >
-          {console.log(isFocused)}
+    
           <div className="h-full flex justify-center text-3xl self-center items-center text-indigo-600 "> <GoSearch /></div>
          
             <input

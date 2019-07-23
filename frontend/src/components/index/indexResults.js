@@ -4,8 +4,8 @@ import { Container } from "../shared/container";
 import Loader from "../misc/loader";
 
 export function IndexResults() {
-  const { jobs, isLoading, setIsLoading } = useContext(FetchContext);
-  const jobList = jobs.jobs.results;
+  const { data, isLoading, setIsLoading } = useContext(FetchContext);
+  const jobList = data.payload.results;
   return (
     <Container>
       <div className="flex flex-col w-5/6 items-start justify-center mx-auto">

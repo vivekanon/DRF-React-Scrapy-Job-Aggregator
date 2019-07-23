@@ -4,14 +4,14 @@ import { Container } from "../shared/container";
 import axios from "axios";
 
 export default function IndexTop() {
-  const { setIsLoading, setJobs, values, setValue } = useContext(FetchContext);
+  const { setLoading, setData, values, setValue } = useContext(FetchContext);
   useEffect(() => {
-    setIsLoading(true);
+    setLoading(true);
 
     async function initialFetch() {
       await axios
         .get("http://127.0.0.1:8000/jobs/")
-        .then(response => setJobs({ jobs: response.data }))
+        .then(response => setData({ payload: response.data }))
         .catch(error => {
           console.log(error);
         });
