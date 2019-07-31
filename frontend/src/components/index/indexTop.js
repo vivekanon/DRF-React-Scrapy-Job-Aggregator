@@ -3,7 +3,9 @@ import { Container } from "../shared/container";
 import { useHookFetch } from '../hooks/fetch'
 
 export default function IndexTop() {
-  if (window.location.pathname === "/") {
+  if (typeof window === 'undefined') {
+    return null
+  } else if ( window.location.pathname === "/") {
     useHookFetch("http://127.0.0.1:8000/jobs/")
   }
   
