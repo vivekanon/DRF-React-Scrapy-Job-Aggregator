@@ -4,6 +4,7 @@ import React from "react";
 import SEO from "../components/misc/seo";
 import { FormResults } from "../components/results/formResults";
 import { IndexForm } from "../components/index/indexForm";
+import IndexNavigation from "../components/index/indexNavigation";
 
 function CompaniesPage() {
   return (
@@ -13,6 +14,7 @@ function CompaniesPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
       />
       <IndexForm />
+      <IndexNavigation />
       <FormResults />
     </>
   );

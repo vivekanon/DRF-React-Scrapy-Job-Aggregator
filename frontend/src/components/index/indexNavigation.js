@@ -21,8 +21,8 @@ export default function IndexNavigation() {
     }
     return (
         <Container>
-          <div className="w-full flex justify-center">
-          <Card className="transform relative ml-0 ">
+       
+          <Card className="transform relative card">
             <Link
               className="truncate w-full h-full flex justify-center p-4 transform font-thin lg:text-base text-xs"
               activeClassName="card-shadow-indicator font-semibold"
@@ -32,7 +32,7 @@ export default function IndexNavigation() {
               <TextSub primary>Home</TextSub>
             </Link>
           </Card>
-          <Card className=" transform relative">
+          <Card className="transform relative card">
             <Link
               className="truncate w-full h-full flex justify-center p-4 transform font-thin lg:text-base text-xs"
               to="/jobs"
@@ -41,7 +41,7 @@ export default function IndexNavigation() {
               <TextSub primary>Jobs</TextSub>
             </Link>
           </Card>
-          <Card className=" transform relative">
+          <Card className=" transform relative card">
             <Link
               className="truncate w-full h-full flex justify-center p-4 transform font-thin lg:text-base text-xs"
               to="/companies"
@@ -51,7 +51,7 @@ export default function IndexNavigation() {
             </Link>
           </Card>
   
-          <Card className=" transform relative mr-0">
+          <Card className="transform relative card">
             <Link
               className="truncate w-full h-full flex justify-center p-4 transform font-thin lg:text-base text-xs"
               to="/trending"
@@ -60,7 +60,7 @@ export default function IndexNavigation() {
              <TextSub primary>Trending</TextSub>
             </Link>
           </Card>
-          </div>
+      
           </Container>
     );
   }

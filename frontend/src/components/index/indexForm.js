@@ -36,7 +36,6 @@ export function IndexForm() {
   }
 
   return (
-    <>
        <Container>
         <div
           className="mx-auto flex flex-1 w-full flex-grow rounded mt-4 border-2 transform"
@@ -80,10 +79,6 @@ export function IndexForm() {
           </form>
         </div>
         </Container>
-        <div className="w-full flex">
-        <IndexNavigation />
-        </div>
-    </>
   );
 }
 
