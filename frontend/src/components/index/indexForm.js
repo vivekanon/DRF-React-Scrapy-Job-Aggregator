@@ -80,7 +80,9 @@ export function IndexForm() {
           </form>
         </div>
         </Container>
-      <IndexNavigation />
+        <div className="w-full flex">
+        <IndexNavigation />
+        </div>
     </>
   );
 }
