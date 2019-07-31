@@ -15,7 +15,8 @@ export default function LoggedInWrapper() {
       <TextPrimary indigo>Logout</TextPrimary>
     </Button>
       <ButtonPrimary
-      onClick={() => navigate("/favorite")}>
+        className="transform"
+        onClick={() => navigate("/favorite")}>
        <TextPrimary White>Profile</TextPrimary>
       </ButtonPrimary>
  

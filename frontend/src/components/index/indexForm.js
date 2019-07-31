@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
+import axios from 'axios'
 import { FetchContext } from "../../store/fetch";
-import { navigate, Link } from "gatsby";
+import { navigate } from "gatsby";
 import { ButtonPrimary } from "../shared/button";
-import { Container } from "../shared/container";
-import { Card } from "../shared/card";
+import { Container, SubContainer } from "../shared/container";
 import { GoSearch } from "react-icons/go";
-import axios from "axios";
-import { TextPrimary, TextSub } from "../shared/text";
+import { TextPrimary } from "../shared/text";
+import IndexNavigation from './indexNavigation'
 
 export function IndexForm() {
   const [isFocused, setIsFocused] = useState(false);
@@ -38,8 +38,9 @@ export function IndexForm() {
   return (
     <>
       <Container>
+        <SubContainer>
         <div
-          className="lg:w-5/6 w-11/12 mx-auto flex  flex-grow rounded mt-4 border-2 transform"
+          className="mx-auto flex flex-1 w-full flex-grow rounded mt-4 border-2 transform"
           style={
             isFocused ? { borderColor: "#5a67d8" } : { borderColor: "#dae1e7" }
           }
@@ -79,65 +80,10 @@ export function IndexForm() {
             </ButtonPrimary>
           </form>
         </div>
+        </SubContainer>
       </Container>
-      <IndexSort />
+      <IndexNavigation />
     </>
   );
 }
 
-export function IndexSort() {
-  const { setJobs } = useContext(FetchContext);
-  async function setBase() {
-    navigate("/");
-    await axios
-      .get("http://127.0.0.1:8000/jobs")
-      .then(response => setJobs({ jobs: response.data }))
-      .catch(error => {
-        console.log(error);
-      });
-  }
-  return (
-    <Container>
-      <div className="lg:w-5/6 w-11/12 mx-auto flex justify-center">
-        <Card className="transform relative ml-0 ">
-          <Link
-            className="truncate w-full h-full flex justify-center p-4 transform font-thin lg:text-base text-xs"
-            activeClassName="card-shadow-indicator font-semibold"
-            to="/"
-            onClick={setBase}
-          >
-            <TextSub primary>Home</TextSub>
-          </Link>
-        </Card>
-        <Card className=" transform relative">
-          <Link
-            className="truncate w-full h-full flex justify-center p-4 transform font-thin lg:text-base text-xs"
-            to="/jobs"
-            activeClassName="card-shadow-indicator"
-          >
-            <TextSub primary>Jobs</TextSub>
-          </Link>
-        </Card>
-        <Card className=" transform relative">
-          <Link
-            className="truncate w-full h-full flex justify-center p-4 transform font-thin lg:text-base text-xs"
-            to="/companies"
-            activeClassName="card-shadow-indicator"
-          >
-           <TextSub primary>Companies</TextSub>
-          </Link>
-        </Card>
-
-        <Card className=" transform relative mr-0">
-          <Link
-            className="truncate w-full h-full flex justify-center p-4 transform font-thin lg:text-base text-xs"
-            to="/trending"
-            activeClassName="card-shadow-indicator"
-          >
-           <TextSub primary>Trending</TextSub>
-          </Link>
-        </Card>
-      </div>
-    </Container>
-  );
-}

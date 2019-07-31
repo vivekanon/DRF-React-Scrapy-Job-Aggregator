@@ -40,23 +40,3 @@
 .focus\:shadow-outline:focus {
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5) !important;
 }
-@media (max-width: 640px) {   
-  .language-card:nth-child(even) {
-    margin-right: 0;
-  }  
-  .language-card {
-    margin-top: 0.5rem;
-  }
-}
-
-@media (min-width: 1024px) { 
-  .card:last-child {
-    margin-right: 0!important;
-  } 
- }
-
-@media (min-width: 1280px) { 
-  .card:last-child {
-    margin-right: 0!important;
-  } 
- }

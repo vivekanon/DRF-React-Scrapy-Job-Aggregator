@@ -1,17 +1,34 @@
 import React from "react";
-import bgImage from '../../../../../images/heroBg.jpg'
+import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
-export default function HeroArea() {
-  const heroBg = {
-    height: '100%',
-    backgroundPosition: 'center',
-    backgroundImage: `url(${bgImage})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover'
-  }
-  return (
-    <div className="lg:flex lg:relative flex-col h-full justify-center hidden lg:w-1/3 w-full fixed z-10">
-      <div style={heroBg} className="hero-bg w-full left-0" />
-    </div>
-  );
+const heroBg = {
+  height: '100%',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover'
 }
+
+const HeroArea = (props) => (
+  <StaticQuery
+  query={graphql`
+    query  {
+      file(relativePath:{  eq:"heroBg.jpg" }) {
+                childImageSharp {
+                  fluid(maxHeight: 600) {
+                    srcSet
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+  `}
+    render={data => (
+      <div className="lg:flex lg:relative flex-col h-full justify-center hidden lg:w-1/3 w-full fixed z-10">
+         <Img style={heroBg} fluid={data.file.childImageSharp.fluid} />
+      </div>
+      )
+    }
+  />
+)
+export default HeroArea

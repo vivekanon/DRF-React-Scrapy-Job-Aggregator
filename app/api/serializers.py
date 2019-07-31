@@ -3,6 +3,7 @@ from . import models
 
 
 class JobSerializer(serializers.ModelSerializer):
+    created_date = serializers.DateTimeField(format="%Y-%m-%d", required=False, read_only=True)
     class Meta:
         ordering = ['-id']
         model = models.Posting

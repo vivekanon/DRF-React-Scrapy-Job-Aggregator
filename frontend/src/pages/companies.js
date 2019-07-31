@@ -2,7 +2,7 @@ import React from "react";
 
 
 import SEO from "../components/misc/seo";
-import {IndexResults} from '../components/index/indexResults'
+import { FormResults } from "../components/results/formResults";
 import { IndexForm } from "../components/index/indexForm";
 
 function CompaniesPage() {
@@ -13,7 +13,7 @@ function CompaniesPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
       />
       <IndexForm />
-      <IndexResults />
+      <FormResults />
     </>
   );
 }

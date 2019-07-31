@@ -9,13 +9,13 @@ import Csharp from "../../images/icons/csharp.png";
 import ReactIcon from "../../images/icons/react.png";
 import Python from "../../images/icons/python.png";
 import Sql from "../../images/icons/sql.png";
-import { Container } from "../shared/container";
+import { Container, SubContainer } from "../shared/container";
 import { TextPrimary, TextSub } from "../shared/text";
 
 export function IndexLanguage() {
   return (
     <Container>
-      <div className="flex flex-col lg:w-5/6 w-11/12 items-start justify-center mx-auto">
+      <SubContainer col>
         <p className="lg:pl-2 pt-6 pb-6 font-semibold">Popular Skills</p>
         <div className="w-full flex justify-around flex-wrap mx-auto">
           {languages.map((language, id) => (
@@ -27,7 +27,7 @@ export function IndexLanguage() {
             />
           ))}
         </div>
-      </div>
+        </SubContainer>
     </Container>
   );
 }
@@ -44,7 +44,7 @@ export function LanguageCard(props) {
   }
   return (
       <div
-        className="lg:w-1/6 md:w-2/5 w-2/5 flex flex-grow rounded lg:p-6 p-4 lg:flex-1 sm:mt-2 mr-2 cursor-pointer language-card card-shadow transform relative "
+        className="lg:w-1/6 md:w-2/5 w-2/5 flex flex-grow rounded p-4 lg:flex-1 sm:mt-2 mr-2 cursor-pointer language-card card-shadow transform relative "
         onClick={handleClick}
       >
         <div className="w-1/2 flex justify-start items-center content-center relative h-full">

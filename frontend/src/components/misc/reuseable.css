@@ -44,23 +44,6 @@ input[type=number]::-webkit-outer-spin-button {
   background-image: linear-gradient(180deg, #fff, #f5f5fa);
 }
 
-@media (min-width: 1024px) { 
-  .job-card:nth-child(odd) {
-    margin-left: 0;
-  }  
-  .job-card:nth-child(even) {
-    margin-right: 0;
-  }   
- }
-
-@media (min-width: 1280px) { 
-  .job-card:nth-child(odd) {
-    margin-left: 0;
-  }  
-  .job-card:nth-child(even) {
-    margin-right: 0;
-  }  
- }
 
 .card-shadow {
   box-shadow: 0 4px 11px 0 rgba(37, 44, 97, .15), 0 1px 3px 0 rgba(93, 100, 148, .2);
@@ -87,3 +70,31 @@ input[type=number]::-webkit-outer-spin-button {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
+
+@media (max-width: 640px) {   
+  .language-card:nth-child(even) {
+    margin-right: 0;
+  }  
+  .language-card {
+    margin-top: 0.5rem;
+  }
+}
+@media (min-width: 1024px) { 
+  .navigation-card:first-child {
+    margin-left: 0!important;
+  }
+  .navigation-card:last-child {
+    margin-right: 0!important;
+  }
+}
+@media (min-width: 1024px) { 
+  .card:last-child {
+    margin-right: 0!important;
+  } 
+ }
+
+@media (min-width: 1280px) { 
+  .card:last-child {
+    margin-right: 0!important;
+  } 
+ }
