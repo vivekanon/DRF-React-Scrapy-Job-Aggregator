@@ -80,6 +80,11 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 @media (min-width: 1024px) { 
+  .language-card:last-child {
+    margin-right: 0!important
+  }
+}
+@media (min-width: 1024px) { 
   .navigation-card:first-child {
     margin-left: 0!important;
   }

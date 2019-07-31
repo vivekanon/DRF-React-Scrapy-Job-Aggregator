@@ -20,7 +20,7 @@ export default function IndexNavigation() {
         });
     }
     return (
-        <SubContainer>
+        <Container>
           <Card className="transform relative ml-0 ">
             <Link
               className="truncate w-full h-full flex justify-center p-4 transform font-thin lg:text-base text-xs"
@@ -59,7 +59,7 @@ export default function IndexNavigation() {
              <TextSub primary>Trending</TextSub>
             </Link>
           </Card>
-          </SubContainer>
+          </Container>
     );
   }
   
