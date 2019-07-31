@@ -3,12 +3,7 @@ import { Container } from "../shared/container";
 import { useHookFetch } from '../hooks/fetch'
 
 export default function IndexTop() {
-  if (typeof window === 'undefined') {
-    return ''
-  } else if ( window.location.pathname === "/") {
     useHookFetch("http://127.0.0.1:8000/jobs/")
-  }
-  
   return (
     <Container>
       <div className="pt-24 pb-12 flex flex-col flex-wrap justify-center items-center">
