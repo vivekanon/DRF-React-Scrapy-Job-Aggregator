@@ -8,7 +8,6 @@ export function FormResults() {
     const { data } = useContext(FetchContext);
     const jobList = data.payload.results;
     return (
-      <Container>
         <SubContainer col>
           <p className="lg:pl-2 pt-6 pb-6 font-semibold">Latest Jobs</p>
           <div className="w-full flex justify-around flex-wrap mx-auto">
@@ -21,6 +20,5 @@ export function FormResults() {
             )}
           </div>
           </SubContainer>
-      </Container>
     );
   }

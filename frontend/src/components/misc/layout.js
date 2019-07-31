@@ -22,7 +22,7 @@ function Layout({ children }) {
         <div className="flex flex-col min-h-screen w-full">
           <ContextProvider>
             <HeaderWrapper siteTitle={data.site.siteMetadata.title} />
-            <div className="flex flex-wrap bg-transparent w-full mx-auto ">
+            <div className="flex flex-wrap bg-gray-100 w-full mx-auto ">
               {children}
             </div>
             <Footer />

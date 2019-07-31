@@ -8,7 +8,7 @@ import { SubContainer } from "../shared/container";
 function HeaderWrapper() {
   return (
     <nav className="bg-white relative flex justify-center h-20 items-center z-50 montserrat shadow">
-      <SubContainer className="items-center">
+      <SubContainer white className="items-center">
         <HeaderLeft />
         <HeaderCenter />
         <HeaderRight />

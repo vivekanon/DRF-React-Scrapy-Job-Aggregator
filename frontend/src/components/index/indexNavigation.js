@@ -20,7 +20,6 @@ export default function IndexNavigation() {
         });
     }
     return (
-      <Container>
         <SubContainer>
           <Card className="transform relative ml-0 ">
             <Link
@@ -61,7 +60,6 @@ export default function IndexNavigation() {
             </Link>
           </Card>
           </SubContainer>
-      </Container>
     );
   }
   

@@ -14,9 +14,10 @@ import { TextPrimary, TextSub } from "../shared/text";
 
 export function IndexLanguage() {
   return (
-    <Container>
       <SubContainer col>
+      <div className="w-full">
         <p className="lg:pl-2 pt-6 pb-6 font-semibold">Popular Skills</p>
+        </div>
         <div className="w-full flex justify-around flex-wrap mx-auto">
           {languages.map((language, id) => (
             <LanguageCard
@@ -28,7 +29,6 @@ export function IndexLanguage() {
           ))}
         </div>
         </SubContainer>
-    </Container>
   );
 }
 
