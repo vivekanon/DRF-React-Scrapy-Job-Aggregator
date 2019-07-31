@@ -7,7 +7,7 @@ export const Container = styled("div")`
   ${props => props.gray && tw`bg-gray-100`};
 `;
 export const SubContainer = styled("div")`
-  ${tw`flex w-11/12 justify-center mx-auto pt-1 pb-1 bg-gray-100 lg:mx-auto`};
+  ${tw`relative flex w-11/12 justify-center mx-auto pt-1 pb-1 bg-gray-100 lg:mx-auto`};
   ${props => props.col && tw`flex-col`};
   ${props => props.white && tw`bg-white`};
 `;
