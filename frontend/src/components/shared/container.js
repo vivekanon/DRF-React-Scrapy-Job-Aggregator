@@ -2,8 +2,9 @@ import styled from "styled-components";
 import tw from "tailwind.macro";
 
 export const Container = styled("div")`
-  ${tw`relative flex w-11/12 pt-1 pb-1 justify-center items-center lg:mx-auto`};
+  ${tw`relative flex w-11/12 pt-1 pb-1 justify-around items-center mx-auto`};
   ${props => props.col && tw`flex-col`};
+  ${props => props.wrap && tw`flex-wrap`};
   ${props => props.gray && tw`bg-gray-100`};
 `;
 export const SubContainer = styled("div")`

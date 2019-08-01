@@ -2,9 +2,9 @@ import React from "react";
 
 
 import SEO from "../components/misc/seo";
-import { FormResults } from "../components/results/formResults";
 import { IndexForm } from "../components/index/indexForm";
 import IndexNavigation from "../components/index/indexNavigation";
+import CompanyResults from "../components/results/companyResults";
 
 function CompaniesPage() {
   return (
@@ -15,7 +15,7 @@ function CompaniesPage() {
       />
       <IndexForm />
       <IndexNavigation />
-      <FormResults />
+      <CompanyResults />
     </>
   );
 }
